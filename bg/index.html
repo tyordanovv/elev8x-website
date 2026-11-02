@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<title>Elev8x – Автоматизация на решения и дигитални служители</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Elev8x автоматизира решенията, които екипът ви взема всеки ден: автоматизация с ясни правила, AI агенти и един AI оркестратор, който докладва на мениджърите ви.">
+<link rel="canonical" href="https://elev8x.eu/bg/">
+<link rel="alternate" hreflang="en" href="https://elev8x.eu/">
+<link rel="alternate" hreflang="bg" href="https://elev8x.eu/bg/">
+<link rel="alternate" hreflang="x-default" href="https://elev8x.eu/">
+<link rel="icon" type="image/svg+xml" href="/assets/elev8x-mark.svg">
+<meta property="og:title" content="Elev8x">
+<meta property="og:description" content="Elev8x автоматизира решенията, които екипът ви взема всеки ден: автоматизация с ясни правила, AI агенти и един AI оркестратор, който докладва на мениджърите ви.">
+<meta property="og:url" content="https://elev8x.eu/bg/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF;color:#231F20;font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+a{color:#231F20}a:hover{color:#8C5A0E}
+.nav-links{display:flex}
+@media (max-width: 1120px){.nav-links{display:none}}
+summary{cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+
+.tab{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #D6D1CB;background:#FFFFFF;color:#231F20;font-family:'Inter',system-ui,sans-serif;font-size:14.5px;font-weight:500;cursor:pointer}
+.tab[aria-selected="true"]{border-color:#231F20;background:#231F20;color:#FFFFFF;font-weight:600}
+.tab:focus-visible{outline:3px solid #F9A11B;outline-offset:2px}
+[data-panel][hidden]{display:none}
+</style>
+</head>
+<body>
+
+<div style="min-height: 100vh; background: #FFFFFF; color: #231F20; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif">
+
+<header style="position: sticky; top: 0; z-index: 20; padding: 14px 16px 0; box-sizing: border-box">
+<nav aria-label="Основна навигация" style="max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 6px 8px 6px 20px; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(14px); border: 1px solid #E7E4E0; border-radius: 999px; box-shadow: 0 8px 28px rgba(35, 31, 32, 0.07)">
+<a href="#top" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none"><img src="/assets/elev8x-logo.svg" alt="elev8x" style="display: block; height: 36px; width: auto"></a>
+<div class="nav-links" style="align-items: center; gap: 22px; font-size: 14px; font-weight: 500">
+<a href="#approach" style="text-decoration: none">Какво изграждаме</a>
+<a href="#orchestrator" style="text-decoration: none">Оркестратор</a>
+<a href="#roles" style="text-decoration: none">Дигитални служители</a>
+<a href="#process" style="text-decoration: none">Как работим</a>
+<a href="#faq" style="text-decoration: none">Въпроси</a>
+</div>
+<div style="display: flex; align-items: center; gap: 8px">
+<a href="/" lang="en" aria-label="English" style="display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 12px; box-sizing: border-box; border-radius: 999px; border: 1px solid #E7E4E0; color: #231F20; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; text-decoration: none">EN</a>
+<a style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap">Насрочете разговор</a>
+</div>
+</nav>
+</header>
+
+<section id="top" style="margin-top: -82px; padding: 170px 0 104px; background-color: #F6F5F3; background-image: linear-gradient(rgba(35, 31, 32, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(35, 31, 32, 0.05) 1px, transparent 1px); background-size: 44px 44px; border-bottom: 1px solid #E7E4E0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 500px; min-width: 0">
+<p style="margin: 0; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 7px 14px; border: 1px solid #E0DCD7; border-radius: 999px; background: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.02em; color: #3D3836"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F9A11B"></span>Автоматизация на решения · AI оркестратор · Дигитални служители</p>
+<h1 style="margin: 24px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(38px, 4.8vw, 64px); line-height: 1.06; letter-spacing: -0.02em; color: #231F20">Автоматизирайте <span style="background-image: linear-gradient(transparent 60%, rgba(249, 161, 27, 0.55) 60%); box-decoration-break: clone">решенията</span>, които екипът ви взема всеки ден.</h1>
+<p style="margin: 24px 0 0; font-size: 19px; line-height: 1.6; color: #3D3836; max-width: 580px">Elev8x изгражда автоматизация с ясни правила и AI агенти, които поемат рутинните решения — дори цели позиции. Над тях стои един AI оркестратор, който следи всеки процес и докладва на мениджърите ви.</p>
+<div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px">
+<a style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-size: 16px; font-weight: 600; text-decoration: none">Заявете безплатен анализ<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+<a href="#approach" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: 999px; border: 1px solid #D6D1CB; background: #FFFFFF; color: #231F20; font-size: 16px; font-weight: 600; text-decoration: none">Вижте как работи</a>
+</div>
+<p style="margin: 28px 0 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12.5px; letter-spacing: 0.02em; color: #5A5450">Първо код. AI там, където си струва. · Фиксирана цена · Хостинг в ЕС</p>
+</div>
+
+<div style="flex: 1 1 420px; min-width: 0; position: relative; padding-bottom: 56px">
+<figure aria-label="Примерен отчет на оркестратора" style="margin: 0; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 24px; box-shadow: 0 24px 60px rgba(35, 31, 32, 0.10); padding: 24px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<div style="display: flex; align-items: center; gap: 12px">
+<img src="/assets/elev8x-mark.svg" alt="" style="display: block; height: 32px; width: auto">
+<div>
+<div style="font-size: 15px; font-weight: 600">Оркестратор</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #66605B">Дневен отчет · 07:30</div>
+</div>
+</div>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #66605B; border: 1px dashed #D6D1CB; border-radius: 999px; padding: 4px 10px">Примерни данни</span>
+</div>
+<p style="margin: 20px 0 16px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.3; color: #231F20">6 процеса работят.<br>2 решения чакат вас.</p>
+<div style="display: flex; flex-direction: column; border: 1px solid #F0EEEB; border-radius: 14px; overflow: hidden">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #F0EEEB">
+<div style="min-width: 0"><div style="font-size: 14px; font-weight: 600">Запитвания за превоз</div><div style="font-size: 12.5px; color: #66605B">46 обработени · 1 ескалирано</div></div>
+<span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #E5F4EA; color: #17663A; font-size: 12px; font-weight: 600"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2E9E5B"></span>Работи</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #F0EEEB">
+<div style="min-width: 0"><div style="font-size: 14px; font-weight: 600">Приемане на поръчки</div><div style="font-size: 12.5px; color: #66605B">112 поръчки · 2 за преглед</div></div>
+<span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-size: 12px; font-weight: 600"><span style="width: 6px; height: 6px; border-radius: 50%; background: #F9A11B"></span>Преглед</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #F0EEEB">
+<div style="min-width: 0"><div style="font-size: 14px; font-weight: 600">Фактури от превозвачи</div><div style="font-size: 12.5px; color: #66605B">24 проверени · 1 несъответствие в цената</div></div>
+<span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-size: 12px; font-weight: 600"><span style="width: 6px; height: 6px; border-radius: 50%; background: #F9A11B"></span>Преглед</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px">
+<div style="min-width: 0"><div style="font-size: 14px; font-weight: 600">Статус към клиенти</div><div style="font-size: 12.5px; color: #66605B">96 изпратени</div></div>
+<span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #E5F4EA; color: #17663A; font-size: 12px; font-weight: 600"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2E9E5B"></span>Работи</span>
+</div>
+</div>
+<div style="margin-top: 16px; border: 1px solid #F6D49E; background: #FFF8EC; border-radius: 14px; padding: 14px 16px">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #8C5A0E">Нужно е ваше решение</div>
+<div style="margin-top: 6px; font-size: 14.5px; line-height: 1.45; color: #231F20">Курс Грац → София: най-добрата оферта е с 8% над лимита ви.</div>
+<div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #231F20; background: #231F20; color: #FFFFFF; font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 600; cursor: pointer">Одобри</button>
+<button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #D6D1CB; background: #FFFFFF; color: #231F20; font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 600; cursor: pointer">Нови оферти</button>
+</div>
+</div>
+</figure>
+<div style="position: absolute; right: -8px; bottom: 0; width: 236px; box-sizing: border-box; padding: 16px; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px; box-shadow: 0 18px 44px rgba(35, 31, 32, 0.12)">
+<div style="font-size: 13px; font-weight: 600">Автоматични решения</div>
+<div style="margin-top: 2px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #66605B">Последните 7 дни · пример</div>
+<div aria-hidden="true" style="margin-top: 14px; height: 64px; display: flex; align-items: flex-end; gap: 7px">
+<span style="flex: 1 1 0; height: 44%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 58%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 52%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 70%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 64%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 84%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 96%; border-radius: 4px 4px 0 0; background: #F9A11B"></span>
+</div>
+<div style="margin-top: 8px; display: flex; justify-content: space-between; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; color: #66605B"><span>Пн</span><span>Нд</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="За кого работим" style="background: #FFFFFF; border-bottom: 1px solid #E7E4E0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 26px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 32px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; font-size: 15px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Създадено за</span>
+<span style="font-weight: 600">Спедиторски фирми</span>
+<span style="font-weight: 600">Транспортни компании</span>
+<span style="font-weight: 600">Вериги бензиностанции</span>
+<span style="font-weight: 600">Експедиция в индустрията</span>
+</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12.5px; letter-spacing: 0.02em; color: #5A5450">Хостинг в ЕС · Договор за обработка на данни по GDPR · BG / EN / DE</div>
+</div>
+</section>
+
+<section aria-labelledby="note-title" style="padding: 112px 0; background: #FFFFFF">
+<div style="max-width: 720px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Защо работим така</p>
+<h2 id="note-title" style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -0.015em; color: #231F20">Започваме от решението, а не от модела.</h2>
+<div style="margin-top: 28px; display: flex; flex-direction: column; gap: 18px; font-size: 19px; line-height: 1.7; color: #2F2B29">
+<p style="margin: 0">Повечето AI проекти започват с инструмент и после търсят проблем. Ние започваме с решение, което екипът ви взема всеки ден: кой го взема, колко често, с каква информация и колко струва една грешка.</p>
+<p style="margin: 0">Където логиката е ясна, я пишем като код. Кодът е по-евтин за поддръжка, дава един и същ резултат всеки път и може да се провери ред по ред. AI използваме само там, където днес хората четат хаотични имейли и документи или претеглят варианти — и поставяме ясни граници.</p>
+<p style="margin: 0">Над всичко стои един оркестратор. Той следи всеки процес и казва на мениджъра ви, на разбираем език, какво е решено и какво изисква човек.</p>
+</div>
+<div style="margin-top: 36px; display: flex; align-items: center; gap: 14px">
+<img src="/assets/elev8x-mark.svg" alt="" style="display: block; height: 40px; width: auto">
+<div>
+<div style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 500; font-size: 22px">Тихомир Йорданов</div>
+<div style="font-size: 13.5px; color: #66605B">Основател, Elev8x</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="approach" style="padding: 112px 0; background: #F6F5F3; border-top: 1px solid #E7E4E0; border-bottom: 1px solid #E7E4E0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 780px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Какво изграждаме</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -0.015em; color: #231F20">Три начина да свалим работа от плещите на екипа ви.</h2>
+<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6; color: #3D3836">Започнете с едно решение. Свържете го с оркестратора. Разширете до цели позиции, когато цифрите го докажат.</p>
+</div>
+<div style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 20px">
+<article style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px; padding: 30px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="width: 48px; height: 48px; border-radius: 14px; background: #FEF1DC; color: #8C5A0E; display: inline-flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><path d="M3 12h6l4-5h5"></path><path d="M13 17h5"></path><path d="M9 12l4 5"></path><path d="M16 4l3 3-3 3"></path><path d="M16 14l3 3-3 3"></path></svg></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">01</span>
+</div>
+<h3 style="margin: 8px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 25px; line-height: 1.2">Автоматизация на решения</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D3836">Превръщаме ежедневните решения на екипа ви в софтуер: кой превозвач поема курса, дали поръчката е пълна, дали фактурата е вярна. Ясната логика работи като код, преценката при хаотични данни — с AI, а останалото остава за човек.</p>
+<div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #F0EEEB; font-size: 14px; line-height: 1.6; color: #5A5450"><span style="font-weight: 600; color: #231F20">Типично: </span>избор на превозвач, проверка на поръчки, ценови оферти, одобряване на фактури</div>
+</article>
+<article style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px; padding: 30px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="width: 48px; height: 48px; border-radius: 14px; background: #FEF1DC; color: #8C5A0E; display: inline-flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 3v3"></path><path d="M12 18v3"></path><path d="M3 12h3"></path><path d="M18 12h3"></path></svg></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">02</span>
+</div>
+<h3 style="margin: 8px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 25px; line-height: 1.2">Оркестраторът</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D3836">Един AI надзорник над всички ваши автоматизации. Следи всеки процес, улавя грешки и аномалии, насочва изключенията към правилния човек и изпраща дневен отчет на мениджърите ви.</p>
+<div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #F0EEEB; font-size: 14px; line-height: 1.6; color: #5A5450"><span style="font-weight: 600; color: #231F20">Типично: </span>сигнали за грешки, проверка за аномалии, ескалации, дневен отчет</div>
+</article>
+<article style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px; padding: 30px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="width: 48px; height: 48px; border-radius: 14px; background: #FEF1DC; color: #8C5A0E; display: inline-flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><circle cx="9" cy="8" r="3.5"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><path d="M16 8h5"></path><path d="M16 12h5"></path><path d="M18 16h3"></path></svg></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">03</span>
+</div>
+<h3 style="margin: 8px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 25px; line-height: 1.2">Дигитални служители</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D3836">Когато една позиция се състои предимно от рутинни решения, автоматизираме цялата роля — от получаването на заявката до приключването ѝ. Екипът ви поема изключенията и отношенията с клиентите.</p>
+<div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #F0EEEB; font-size: 14px; line-height: 1.6; color: #5A5450"><span style="font-weight: 600; color: #231F20">Типично: </span>спедитор, приемане на поръчки, контрол на фактури, бек офис на бензиностанции</div>
+</article>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="flow-title" style="padding: 112px 0; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 780px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Как се взема едно решение</p>
+<h2 id="flow-title" style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -0.015em; color: #231F20">Всяко решение минава по най-евтиния безопасен път.</h2>
+<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6; color: #3D3836">Код, където логиката е ясна. AI, където данните са хаотични. Хора — само за изключенията.</p>
+</div>
+<ol style="margin: 48px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 14px">
+<li style="flex: 1 1 200px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 24px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">01</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Вход</span></div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3">Постъпва заявка</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D3836">Имейли, PDF файлове, портали, таблици или вашата ERP система. За подателя нищо не се променя.</p>
+</li>
+<li style="flex: 1 1 200px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 24px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">02</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Код</span></div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3">Правилата я проверяват</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D3836">Лимити, политики и проверки работят като обикновен код. Един и същ вход — един и същ резултат, всеки път.</p>
+</li>
+<li style="flex: 1 1 200px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 24px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">03</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #ECEEFB; color: #3346A8; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">AI</span></div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3">AI преценява неясното</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D3836">Само където текстът е неструктуриран или вариантите трябва да се претеглят: разчитане на заявка, оценка на превозвачи.</p>
+</li>
+<li style="flex: 1 1 200px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 24px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">04</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Код</span></div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3">Решението се изпълнява</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D3836">В зададените от вас граници системата действа: резервира, въвежда, одобрява или отговаря.</p>
+</li>
+<li style="flex: 1 1 200px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 24px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">05</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Човек</span></div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3">Изключенията — при хора</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D3836">Всичко извън правилата стига до правилния човек, заедно с пълния контекст.</p>
+</li>
+</ol>
+<div style="margin-top: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding: 18px 22px; border-radius: 18px; background: #1E1B19; color: #F4F2EF">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 22px; width: 22px; height: 22px; fill: none; stroke: #F9A11B; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 3v3"></path><path d="M12 18v3"></path><path d="M3 12h3"></path><path d="M18 12h3"></path></svg>
+<p style="margin: 0; flex: 1 1 300px; font-size: 15.5px; line-height: 1.5">Оркестраторът записва всяка стъпка: входа, правилото или модела, който е решил, резултата и кой е одобрил.</p>
+</div>
+</div>
+</section>
+
+<section id="orchestrator" style="padding: 112px 0; background: #1E1B19; color: #F4F2EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 420px; min-width: 0">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #BDB6AF">Оркестраторът</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -0.015em; color: #FFFFFF">Един AI следи всеки процес. Един отчет на бюрото на мениджъра.</h2>
+<p style="margin: 18px 0 0; font-size: 18px; line-height: 1.6; color: #BDB6AF">Когато автоматизациите се умножат, някой трябва да ги следи. Оркестраторът е AI надзорник, който проверява всяко изпълнение, забелязва нередностите и държи мениджърите ви информирани — без поредното табло, което някой трябва да гледа.</p>
+<ul style="margin: 36px 0 0; padding: 0; list-style: none; border-top: 1px solid #34302D">
+<li style="display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 18px 0; border-bottom: 1px solid #34302D"><span style="flex: 0 0 104px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #F9A11B">Следи</span><span style="flex: 1 1 240px; font-size: 15.5px; line-height: 1.55; color: #DAD5CF">Проверява всяко изпълнение, опашка и грешка, денонощно.</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 18px 0; border-bottom: 1px solid #34302D"><span style="flex: 0 0 104px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #F9A11B">Ескалира</span><span style="flex: 1 1 240px; font-size: 15.5px; line-height: 1.55; color: #DAD5CF">Насочва само истинските изключения към правилния човек, с контекст за бързо решение.</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 18px 0; border-bottom: 1px solid #34302D"><span style="flex: 0 0 104px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #F9A11B">Отчита</span><span style="flex: 1 1 240px; font-size: 15.5px; line-height: 1.55; color: #DAD5CF">Дневен отчет и седмично обобщение за мениджъра, на разбираем език.</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 18px 0; border-bottom: 1px solid #34302D"><span style="flex: 0 0 104px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #F9A11B">Доказва</span><span style="flex: 1 1 240px; font-size: 15.5px; line-height: 1.55; color: #DAD5CF">Одитна следа за всяко решение: вход, правило или модел, резултат.</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 460px; min-width: 0">
+<figure aria-label="Примерна конзола на оркестратора" style="margin: 0; background: #262220; border: 1px solid #3A3532; border-radius: 22px; overflow: hidden; font-family: 'JetBrains Mono', ui-monospace, monospace">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #3A3532; font-size: 12.5px; color: #BDB6AF">
+<span style="display: inline-flex; align-items: center; gap: 10px"><img src="/assets/elev8x-mark.svg" alt="" style="display: block; height: 18px; width: auto">orchestrator / днес</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; color: #6FD49A"><span style="width: 8px; height: 8px; border-radius: 50%; background: #6FD49A"></span>на живо</span>
+</div>
+<div style="padding: 6px 18px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 11px 0; border-bottom: 1px solid #312C29; font-size: 13px"><span style="flex: 1 1 170px; color: #F4F2EF">freight-enquiries</span><span style="flex: 0 0 auto; color: #A39B93">46 изпълнения</span><span style="flex: 0 0 120px; text-align: right; color: #6FD49A">работи</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 11px 0; border-bottom: 1px solid #312C29; font-size: 13px"><span style="flex: 1 1 170px; color: #F4F2EF">order-intake</span><span style="flex: 0 0 auto; color: #A39B93">112 изпълнения</span><span style="flex: 0 0 120px; text-align: right; color: #F9A11B">2 за преглед</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 11px 0; border-bottom: 1px solid #312C29; font-size: 13px"><span style="flex: 1 1 170px; color: #F4F2EF">invoice-check</span><span style="flex: 0 0 auto; color: #A39B93">24 изпълнения</span><span style="flex: 0 0 120px; text-align: right; color: #F9A11B">1 ескалирано</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 11px 0; border-bottom: 1px solid #312C29; font-size: 13px"><span style="flex: 1 1 170px; color: #F4F2EF">status-updates</span><span style="flex: 0 0 auto; color: #A39B93">96 изпълнения</span><span style="flex: 0 0 120px; text-align: right; color: #6FD49A">работи</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 11px 0; font-size: 13px"><span style="flex: 1 1 170px; color: #F4F2EF">station-close</span><span style="flex: 0 0 auto; color: #A39B93">2 обекта</span><span style="flex: 0 0 120px; text-align: right; color: #6FD49A">работи</span></div>
+</div>
+<div style="padding: 16px 18px 18px; border-top: 1px solid #3A3532; background: #211E1C; display: flex; flex-direction: column; gap: 9px; font-size: 12.5px; line-height: 1.5">
+<div style="display: flex; gap: 12px"><span style="flex: 0 0 auto; color: #A39B93">07:02</span><span style="color: #D6D0CA">freight-enquiries → запитани 18 превозвачи за курс Грац–София</span></div>
+<div style="display: flex; gap: 12px"><span style="flex: 0 0 auto; color: #A39B93">07:09</span><span style="color: #D6D0CA">freight-enquiries → 6 оферти, най-добрата е в лимита, резервирана</span></div>
+<div style="display: flex; gap: 12px"><span style="flex: 0 0 auto; color: #A39B93">07:15</span><span style="color: #D6D0CA">order-intake → липсва тегло, изпратено за преглед</span></div>
+<div style="display: flex; gap: 12px"><span style="flex: 0 0 auto; color: #A39B93">07:30</span><span style="color: #D6D0CA">briefing → изпратен на оперативния мениджър</span></div>
+<div style="display: flex; gap: 12px"><span style="flex: 0 0 auto; color: #A39B93">07:31</span><span style="color: #F9A11B">invoice-check → цена над договорената, ескалирано</span></div>
+</div>
+<div style="padding: 12px 18px; border-top: 1px solid #3A3532; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #A39B93">Примерни данни</div>
+</figure>
+</div>
+</div>
+</section>
+
+<section id="roles" style="padding: 112px 0 72px; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 780px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Дигитални служители</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -0.015em; color: #231F20">Заменете цяла позиция, а не само задача.</h2>
+<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6; color: #3D3836">Някои позиции се състоят главно от рутинни решения, вземани по имейли, PDF файлове и портали. Автоматизираме цялата роля от край до край, а екипът ви поема само изключенията.</p>
+</div>
+<div role="tablist" aria-label="Примерни дигитални служители" style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 10px">
+<button type="button" class="tab" role="tab" data-tab="dispatcher" aria-selected="true">Спедитор</button>
+<button type="button" class="tab" role="tab" data-tab="intake" aria-selected="false">Приемане на поръчки</button>
+<button type="button" class="tab" role="tab" data-tab="invoice" aria-selected="false">Контрол на фактури</button>
+<button type="button" class="tab" role="tab" data-tab="station" aria-selected="false">Бек офис на бензиностанции</button>
+</div>
+
+<div role="tabpanel" style="margin-top: 20px; border: 1px solid #E7E4E0; border-radius: 24px; background: #F9F8F6; padding: clamp(22px, 3vw, 36px); box-sizing: border-box">
+<div data-panel="dispatcher">
+<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 420px; min-width: 0">
+<span style="display: inline-flex; padding: 5px 12px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.02em">Изграден със спедиторска фирма · 2 ч → 17 мин на запитване</span>
+<h3 style="margin: 16px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.15">Дигитален спедитор</h3>
+<p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: #3D3836">Поема ежедневния цикъл от заявки за превоз, запитвания към превозвачи и резервации на спедиторския екип.</p>
+<ul style="margin: 24px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Чете заявки за превоз от имейл, PDF и клиентски портали</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Избира подходящи превозвачи от вашата мрежа и от товарните борси</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Изпраща запитвания и събира оферти на български, английски и немски</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Сравнява цена, срок и надеждност и резервира в рамките на лимитите ви</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Изпраща потвърждения и статус към клиента</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; align-self: flex-start; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px; padding: 24px; box-sizing: border-box">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Кой какво прави</div>
+<div style="margin-top: 18px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Код</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Правила за превозвачи, ценови лимити, резервации, потвърждения</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #ECEEFB; color: #3346A8; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">AI</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Разчитане на свободен текст в заявки и отговори, сравнение на оферти</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Вашият екип</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Курсове над лимита, нови клиенти, спорове</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div data-panel="intake" hidden>
+<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 420px; min-width: 0">
+<span style="display: inline-flex; padding: 5px 12px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.02em">Примерна роля</span>
+<h3 style="margin: 16px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.15">Дигитален служител по поръчките</h3>
+<p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: #3D3836">Превръща входящите поръчки във всякакъв формат в изрядни записи във вашата TMS или ERP система.</p>
+<ul style="margin: 24px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Чете поръчки от имейл, PDF и Excel в произволен формат</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Проверява адреси, дати, тегла и цени спрямо вашите правила</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Въвежда коректните поръчки директно в TMS или ERP</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Връща неясните поръчки на подателя с посочени липсващи данни</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; align-self: flex-start; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px; padding: 24px; box-sizing: border-box">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Кой какво прави</div>
+<div style="margin-top: 18px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Код</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Правила за валидиране, проверка за дубликати, въвеждане в системите ви</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #ECEEFB; color: #3346A8; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">AI</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Разчитане на поръчки в произволен формат и език</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Вашият екип</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Нестандартни поръчки и разговори с клиенти</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div data-panel="invoice" hidden>
+<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 420px; min-width: 0">
+<span style="display: inline-flex; padding: 5px 12px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.02em">Примерна роля</span>
+<h3 style="margin: 16px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.15">Дигитален контрольор на фактури</h3>
+<p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: #3D3836">Проверява всяка фактура от превозвач или доставчик, преди да бъде платена.</p>
+<ul style="margin: 24px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Свързва фактурите с поръчки и доказателства за доставка</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Проверява всеки ред спрямо договорените тарифи и надбавки</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Одобрява съвпаденията и задържа несъответствията с посочена причина</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Изисква липсващите CMR и документи за доставка</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; align-self: flex-start; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px; padding: 24px; box-sizing: border-box">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Кой какво прави</div>
+<div style="margin-top: 18px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Код</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Съпоставяне, проверка на тарифи, одобрения в рамките на лимити</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #ECEEFB; color: #3346A8; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">AI</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Разчитане на сканирани фактури и документи за доставка</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Вашият екип</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Спорове и преговори с доставчици</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div data-panel="station" hidden>
+<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 420px; min-width: 0">
+<span style="display: inline-flex; padding: 5px 12px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.02em">Работи при верига бензиностанции · 6 ч спестени седмично</span>
+<h3 style="margin: 16px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.15">Дигитален бек офис за бензиностанции</h3>
+<p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: #3D3836">Поема ежедневната документация на верига бензиностанции, за всички обекти.</p>
+<ul style="margin: 24px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Обединява дневните отчети от всеки обект</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Равнява доставките на гориво спрямо поръчките</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Отбелязва разлики в касата и наличностите още същия ден</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Изпраща на собственика едно сутрешно обобщение за всички обекти</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; align-self: flex-start; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px; padding: 24px; box-sizing: border-box">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Кой какво прави</div>
+<div style="margin-top: 18px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Код</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Обединяване, равняване, сигнали</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #ECEEFB; color: #3346A8; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">AI</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Разчитане на хартиени и PDF документи за доставка</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Вашият екип</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Доставчици, персонал и решения за обектите</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="Нашите ангажименти" style="padding: 0 0 112px; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; gap: 1px; background: #E7E4E0; border: 1px solid #E7E4E0; border-radius: 22px; overflow: hidden">
+<div style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; padding: 30px 28px; box-sizing: border-box">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: #8C5A0E; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><path d="M3 12V4h8l10 10-8 8L3 12z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg>
+<div style="margin-top: 18px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px; line-height: 1.1">Фиксирана цена</div>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: #4A4542">Една фиксирана цена за изграждането, след това месечна такса за наблюдение и подобрения.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; padding: 30px 28px; box-sizing: border-box">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: #8C5A0E; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+<div style="margin-top: 18px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px; line-height: 1.1">3–5 седмици</div>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: #4A4542">От анализа до работещ пилотен проект.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; padding: 30px 28px; box-sizing: border-box">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: #8C5A0E; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><path d="M3 12h4l2-5 4 10 2-5h6"></path></svg>
+<div style="margin-top: 18px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px; line-height: 1.1">24/7</div>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: #4A4542">Всеки процес е под наблюдението на оркестратора.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; padding: 30px 28px; box-sizing: border-box">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: #8C5A0E; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-0.7-8-4.5-8-9V6l8-3z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></svg>
+<div style="margin-top: 18px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px; line-height: 1.1">Хостинг в ЕС</div>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: #4A4542">Договор за обработка на данни по GDPR или ваши собствени сървъри.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="cases" style="padding: 112px 0; background: #F6F5F3; border-top: 1px solid #E7E4E0; border-bottom: 1px solid #E7E4E0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 780px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Резултати</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -0.015em; color: #231F20">Създадено за реални операции, измерено в часове.</h2>
+<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6; color: #3D3836">Всеки проект започва с измерване на изходната ситуация, така че резултатът е измерен, а не прогнозиран.</p>
+</div>
+<div style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 20px">
+<article style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 14px; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px; padding: 30px; box-sizing: border-box">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #E5F4EA; color: #17663A; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2E9E5B"></span>Работи</span>
+<h3 style="margin: 4px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 24px; line-height: 1.2">Верига бензиностанции</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">Автоматизиран бек офис: дневни отчети, доставки и равнения за всички обекти, обобщени за собственика всяка сутрин.</p>
+<div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #F0EEEB; display: flex; flex-wrap: wrap; gap: 18px 36px">
+<div><div style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px">6 ч</div><div style="font-size: 13px; color: #66605B">спестени седмично</div></div>
+<div><div style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px">2</div><div style="font-size: 13px; color: #66605B">обекта</div></div>
+</div>
+</article>
+<article style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 14px; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px; padding: 30px; box-sizing: border-box">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #F9A11B"></span>В процес</span>
+<h3 style="margin: 4px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 24px; line-height: 1.2">Спедиторска фирма</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">Дигитален спедитор: запитвания към превозвачи, събиране и сравнение на оферти, предложение за най-добрия вариант за резервация.</p>
+<div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #F0EEEB; display: flex; flex-wrap: wrap; gap: 18px 36px">
+<div><div style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px">2 ч → 17 мин</div><div style="font-size: 13px; color: #66605B">на запитване</div></div>
+</div>
+</article>
+<figure style="flex: 1 1 320px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; background: #1E1B19; color: #F4F2EF; border-radius: 22px; padding: 30px; box-sizing: border-box">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 28px; height: 28px; fill: none; stroke: #F9A11B; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><path d="M9 7H5v6h4v4H5"></path><path d="M19 7h-4v6h4v4h-4"></path></svg>
+<blockquote style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.4; color: #FFFFFF">„Ако една автоматизация няма да спести повече, отколкото струва, ще ви кажем, преди да платите каквото и да е.“</blockquote>
+<figcaption style="margin-top: auto; padding-top: 18px; border-top: 1px solid #34302D; font-size: 14px; color: #BDB6AF">Тихомир Йорданов, основател · обещанието ни към всеки клиент</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section id="process" style="padding: 112px 0; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 780px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Как работим</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -0.015em; color: #231F20">От първия разговор до работещ дигитален служител.</h2>
+</div>
+<ol style="margin: 48px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 20px">
+<li style="flex: 1 1 240px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #231F20">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #F9A11B; color: #231F20; display: inline-flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 21px">1</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">1–2 седмици</span></div>
+<h3 style="margin: 6px 0 0; font-size: 19px; font-weight: 600; line-height: 1.3">Безплатен анализ за автоматизация</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">Две кратки срещи. Описваме един процес, решенията в него и тяхната цена и даваме фиксирана оферта.</p>
+</li>
+<li style="flex: 1 1 240px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #231F20">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #F9A11B; color: #231F20; display: inline-flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 21px">2</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">3–5 седмици</span></div>
+<h3 style="margin: 6px 0 0; font-size: 19px; font-weight: 600; line-height: 1.3">Пилотен проект на фиксирана цена</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">Автоматизираме процеса от край до край, върху системите, които вече използвате.</p>
+</li>
+<li style="flex: 1 1 240px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #231F20">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #F9A11B; color: #231F20; display: inline-flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 21px">3</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Преди старта</span></div>
+<h3 style="margin: 6px 0 0; font-size: 19px; font-weight: 600; line-height: 1.3">Старт с предпазни механизми</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">Лимитите, одобренията и резервните варианти се договарят с вас, преди нещо да работи самостоятелно.</p>
+</li>
+<li style="flex: 1 1 240px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #231F20">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #F9A11B; color: #231F20; display: inline-flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 21px">4</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Ежемесечно</span></div>
+<h3 style="margin: 6px 0 0; font-size: 19px; font-weight: 600; line-height: 1.3">Наблюдение и подобрения</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">Оркестраторът следи и докладва. Ние поправяме, настройваме и разширяваме всеки месец.</p>
+</li>
+</ol>
+<div style="margin-top: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; border: 1px solid #E7E4E0; border-radius: 18px; background: #F9F8F6">
+<p style="margin: 0; flex: 1 1 360px; font-size: 16px; line-height: 1.55; color: #2F2B29"><span style="font-weight: 600; color: #231F20">Фиксирана цена за изграждането.</span> След това една месечна такса за наблюдение от оркестратора и постоянни подобрения.</p>
+<a style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-size: 15px; font-weight: 600; text-decoration: none">Започнете с безплатен анализ</a>
+</div>
+</div>
+</section>
+
+<section id="team" style="padding: 112px 0; background: #F6F5F3; border-top: 1px solid #E7E4E0; border-bottom: 1px solid #E7E4E0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 780px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Екип</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -0.015em; color: #231F20">Сериозен инженерен опит, лично изпълнение.</h2>
+<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6; color: #3D3836">Малък екип по избор: човекът, с когото говорите, е човекът, който изгражда. Работим в България, Германия, Австрия и Швейцария.</p>
+</div>
+<div style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 20px">
+<article style="flex: 0 1 720px; min-width: 0; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px; padding: 30px; box-sizing: border-box">
+<div aria-hidden="true" style="flex: 0 0 84px; width: 84px; height: 84px; border-radius: 50%; background: #F9A11B; color: #231F20; display: flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px">ТЙ</div>
+<div style="flex: 1 1 300px; min-width: 0">
+<h3 style="margin: 0; font-size: 21px; font-weight: 600">Тихомир Йорданов</h3>
+<div style="margin-top: 4px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12.5px; letter-spacing: 0.02em; color: #66605B">Основател и водещ инженер</div>
+<p style="margin: 14px 0 0; font-size: 16px; line-height: 1.6; color: #3D3836">Старши софтуерен инженер, изграждал системи за германска банкова група и за производител на полупроводници в Австрия. Проектира и изгражда всяка автоматизация на Elev8x и остава ваш контакт от първия разговор до старта.</p>
+<p style="margin: 14px 0 0; font-size: 13.5px; color: #66605B">Български · Английски · Немски</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="faq" style="padding: 112px 0; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 32px 64px">
+<div style="flex: 1 1 300px; min-width: 0">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Въпроси</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -0.015em; color: #231F20">Въпроси, които собствениците ни задават.</h2>
+</div>
+<div style="flex: 2 1 520px; min-width: 0; border-top: 1px solid #E7E4E0">
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17px; font-weight: 600">Трябва ли да сменяме софтуера си?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">Не. Свързваме се с вашата TMS или ERP система, пощенска кутия и портали. Където системата няма интерфейс за интеграция, работим през екраните ѝ.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17px; font-weight: 600">Как се формира цената?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">Фиксирана цена за всяко изграждане, договорена преди старта. След пускането една месечна такса покрива наблюдението от оркестратора и постоянните подобрения.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17px; font-weight: 600">Какво става, когато AI не е сигурен?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">Не гадае. Всяко решение има граници и всичко извън тях отива при човек, заедно с контекста.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17px; font-weight: 600">Къде се съхраняват данните ни?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">На сървъри в ЕС, с договор за обработка на данни по GDPR. При желание всичко работи на ваша собствена инфраструктура.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17px; font-weight: 600">Какво става с хората на тази позиция?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">Това решавате вие. Често те поемат изключенията, ключовите клиенти и развитието на бизнеса, докато дигиталният служител поема рутинния обем.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17px; font-weight: 600">Колко бързо ще видим резултат?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">Анализът отнема една до две седмици. Пилотният проект тръгва три до пет седмици след това.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17px; font-weight: 600">На какви езици работите?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">Български, английски и немски — както с екипа ви, така и в съобщенията, които автоматизациите изпращат.</p>
+</details>
+</div>
+</div>
+</section>
+
+<section id="contact" style="padding: 0 0 112px; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="border-radius: 28px; background-color: #1E1B19; background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px); background-size: 44px 44px; color: #F4F2EF; padding: clamp(32px, 6vw, 72px); box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
+<div style="flex: 1 1 460px; min-width: 0">
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(30px, 3.8vw, 50px); line-height: 1.1; letter-spacing: -0.015em; color: #FFFFFF">Кое решение отнема най-много часове на екипа ви?</h2>
+<p style="margin: 18px 0 0; max-width: 580px; font-size: 18px; line-height: 1.6; color: #BDB6AF">Разкажете ни в 30-минутен разговор. Ще получите карта на това решение и фиксирана цена за автоматизацията му. Без презентации, без ангажимент.</p>
+</div>
+<div style="flex: 0 1 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
+<a style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 26px; border-radius: 999px; background: #F9A11B; color: #231F20; font-size: 16px; font-weight: 600; text-decoration: none">Заявете безплатен анализ<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #A39B93">или пишете на info@elev8x.eu</span>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #E7E4E0; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 36px 24px 44px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 32px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px">
+<img src="/assets/elev8x-logo.svg" alt="elev8x" style="display: block; height: 32px; width: auto">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12.5px; color: #66605B">Първо код. AI там, където си струва.</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; font-size: 14px; color: #4A4542">
+<span>© 2026 Elev8x · elev8x.eu</span>
+<a href="#top" style="color: #4A4542">Правна информация</a>
+<a href="#top" style="color: #4A4542">Поверителност</a>
+<a href="/" lang="en" style="color: #4A4542">English</a>
+<span>info@elev8x.eu</span>
+</div>
+</div>
+</footer>
+
+</div>
+
+<script>
+document.querySelectorAll('[data-tab]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var id = btn.getAttribute('data-tab');
+    document.querySelectorAll('[data-tab]').forEach(function (b) {
+      b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+    });
+    document.querySelectorAll('[data-panel]').forEach(function (p) {
+      p.hidden = p.getAttribute('data-panel') !== id;
+    });
+  });
+});
+</script>
+</body>
+</html>

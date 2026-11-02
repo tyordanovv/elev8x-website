@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Elev8x – Decision automation and digital roles</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Elev8x automates the decisions your team makes every day: rule-based automation, AI agents and one orchestrator AI that reports to your managers.">
+<link rel="canonical" href="https://elev8x.eu/">
+<link rel="alternate" hreflang="en" href="https://elev8x.eu/">
+<link rel="alternate" hreflang="bg" href="https://elev8x.eu/bg/">
+<link rel="alternate" hreflang="x-default" href="https://elev8x.eu/">
+<link rel="icon" type="image/svg+xml" href="/assets/elev8x-mark.svg">
+<meta property="og:title" content="Elev8x">
+<meta property="og:description" content="Elev8x automates the decisions your team makes every day: rule-based automation, AI agents and one orchestrator AI that reports to your managers.">
+<meta property="og:url" content="https://elev8x.eu/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF;color:#231F20;font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+a{color:#231F20}a:hover{color:#8C5A0E}
+.nav-links{display:flex}
+@media (max-width: 960px){.nav-links{display:none}}
+summary{cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+
+.tab{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #D6D1CB;background:#FFFFFF;color:#231F20;font-family:'Inter',system-ui,sans-serif;font-size:14.5px;font-weight:500;cursor:pointer}
+.tab[aria-selected="true"]{border-color:#231F20;background:#231F20;color:#FFFFFF;font-weight:600}
+.tab:focus-visible{outline:3px solid #F9A11B;outline-offset:2px}
+[data-panel][hidden]{display:none}
+</style>
+</head>
+<body>
+
+<div style="min-height: 100vh; background: #FFFFFF; color: #231F20; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif">
+
+<header style="position: sticky; top: 0; z-index: 20; padding: 14px 16px 0; box-sizing: border-box">
+<nav aria-label="Main" style="max-width: 1120px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 6px 8px 6px 20px; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(14px); border: 1px solid #E7E4E0; border-radius: 999px; box-shadow: 0 8px 28px rgba(35, 31, 32, 0.07)">
+<a href="#top" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none"><img src="/assets/elev8x-logo.svg" alt="elev8x" style="display: block; height: 36px; width: auto"></a>
+<div class="nav-links" style="align-items: center; gap: 26px; font-size: 14px; font-weight: 500">
+<a href="#approach" style="text-decoration: none">What we build</a>
+<a href="#orchestrator" style="text-decoration: none">Orchestrator</a>
+<a href="#roles" style="text-decoration: none">Digital roles</a>
+<a href="#process" style="text-decoration: none">How we work</a>
+<a href="#faq" style="text-decoration: none">FAQ</a>
+</div>
+<div style="display: flex; align-items: center; gap: 8px">
+<a href="/bg/" lang="bg" aria-label="Български" style="display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 12px; box-sizing: border-box; border-radius: 999px; border: 1px solid #E7E4E0; color: #231F20; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; text-decoration: none">BG</a>
+<a style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap">Book a call</a>
+</div>
+</nav>
+</header>
+
+<section id="top" style="margin-top: -82px; padding: 170px 0 104px; background-color: #F6F5F3; background-image: linear-gradient(rgba(35, 31, 32, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(35, 31, 32, 0.05) 1px, transparent 1px); background-size: 44px 44px; border-bottom: 1px solid #E7E4E0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 480px; min-width: 0">
+<p style="margin: 0; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 7px 14px; border: 1px solid #E0DCD7; border-radius: 999px; background: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; color: #3D3836"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F9A11B"></span>Decision automation · Orchestrator AI · Digital roles</p>
+<h1 style="margin: 24px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(42px, 5.4vw, 72px); line-height: 1.04; letter-spacing: -0.02em; color: #231F20">Automate the <span style="background-image: linear-gradient(transparent 60%, rgba(249, 161, 27, 0.55) 60%); box-decoration-break: clone">decisions</span> your team makes all day.</h1>
+<p style="margin: 24px 0 0; font-size: 19px; line-height: 1.6; color: #3D3836; max-width: 560px">Elev8x builds rule-based automation and AI agents that take over decision-heavy work, up to entire roles, plus one orchestrator AI that watches every process and reports to your managers.</p>
+<div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px">
+<a style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-size: 16px; font-weight: 600; text-decoration: none">Book a free automation check<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+<a href="#approach" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: 999px; border: 1px solid #D6D1CB; background: #FFFFFF; color: #231F20; font-size: 16px; font-weight: 600; text-decoration: none">See how it works</a>
+</div>
+<p style="margin: 28px 0 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12.5px; letter-spacing: 0.02em; color: #5A5450">Code first. AI where it pays. · Fixed price · EU-hosted</p>
+</div>
+
+<div style="flex: 1 1 420px; min-width: 0; position: relative; padding-bottom: 56px">
+<figure aria-label="Sample orchestrator briefing" style="margin: 0; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 24px; box-shadow: 0 24px 60px rgba(35, 31, 32, 0.10); padding: 24px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<div style="display: flex; align-items: center; gap: 12px">
+<img src="/assets/elev8x-mark.svg" alt="" style="display: block; height: 32px; width: auto">
+<div>
+<div style="font-size: 15px; font-weight: 600">Orchestrator</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #66605B">Daily briefing · 07:30</div>
+</div>
+</div>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #66605B; border: 1px dashed #D6D1CB; border-radius: 999px; padding: 4px 10px">Sample data</span>
+</div>
+<p style="margin: 20px 0 16px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.3; color: #231F20">6 processes running.<br>2 decisions need you.</p>
+<div style="display: flex; flex-direction: column; border: 1px solid #F0EEEB; border-radius: 14px; overflow: hidden">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #F0EEEB">
+<div style="min-width: 0"><div style="font-size: 14px; font-weight: 600">Freight enquiries</div><div style="font-size: 12.5px; color: #66605B">46 handled · 1 escalated</div></div>
+<span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #E5F4EA; color: #17663A; font-size: 12px; font-weight: 600"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2E9E5B"></span>Running</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #F0EEEB">
+<div style="min-width: 0"><div style="font-size: 14px; font-weight: 600">Order intake</div><div style="font-size: 12.5px; color: #66605B">112 orders · 2 for review</div></div>
+<span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-size: 12px; font-weight: 600"><span style="width: 6px; height: 6px; border-radius: 50%; background: #F9A11B"></span>Review</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #F0EEEB">
+<div style="min-width: 0"><div style="font-size: 14px; font-weight: 600">Carrier invoices</div><div style="font-size: 12.5px; color: #66605B">24 checked · 1 rate mismatch</div></div>
+<span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-size: 12px; font-weight: 600"><span style="width: 6px; height: 6px; border-radius: 50%; background: #F9A11B"></span>Review</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px">
+<div style="min-width: 0"><div style="font-size: 14px; font-weight: 600">Customer status updates</div><div style="font-size: 12.5px; color: #66605B">96 sent</div></div>
+<span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #E5F4EA; color: #17663A; font-size: 12px; font-weight: 600"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2E9E5B"></span>Running</span>
+</div>
+</div>
+<div style="margin-top: 16px; border: 1px solid #F6D49E; background: #FFF8EC; border-radius: 14px; padding: 14px 16px">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #8C5A0E">Needs your decision</div>
+<div style="margin-top: 6px; font-size: 14.5px; line-height: 1.45; color: #231F20">Load Graz → Sofia: the best quote is 8% above your limit.</div>
+<div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #231F20; background: #231F20; color: #FFFFFF; font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 600; cursor: pointer">Approve</button>
+<button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #D6D1CB; background: #FFFFFF; color: #231F20; font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 600; cursor: pointer">Re-tender</button>
+</div>
+</div>
+</figure>
+<div style="position: absolute; right: -8px; bottom: 0; width: 236px; box-sizing: border-box; padding: 16px; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px; box-shadow: 0 18px 44px rgba(35, 31, 32, 0.12)">
+<div style="font-size: 13px; font-weight: 600">Decided automatically</div>
+<div style="margin-top: 2px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #66605B">Last 7 days · sample</div>
+<div aria-hidden="true" style="margin-top: 14px; height: 64px; display: flex; align-items: flex-end; gap: 7px">
+<span style="flex: 1 1 0; height: 44%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 58%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 52%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 70%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 64%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 84%; border-radius: 4px 4px 0 0; background: rgba(249, 161, 27, 0.38)"></span>
+<span style="flex: 1 1 0; height: 96%; border-radius: 4px 4px 0 0; background: #F9A11B"></span>
+</div>
+<div style="margin-top: 8px; display: flex; justify-content: space-between; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; color: #66605B"><span>Mon</span><span>Sun</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="Who we work with" style="background: #FFFFFF; border-bottom: 1px solid #E7E4E0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 26px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 32px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; font-size: 15px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Built for</span>
+<span style="font-weight: 600">Freight forwarders</span>
+<span style="font-weight: 600">Transport companies</span>
+<span style="font-weight: 600">Fuel-station groups</span>
+<span style="font-weight: 600">Industrial shipping teams</span>
+</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12.5px; letter-spacing: 0.02em; color: #5A5450">EU-hosted · GDPR data processing agreement · EN / DE / BG</div>
+</div>
+</section>
+
+<section aria-labelledby="note-title" style="padding: 112px 0; background: #FFFFFF">
+<div style="max-width: 720px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Why we work this way</p>
+<h2 id="note-title" style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.015em; color: #231F20">We start with the decision, not the model.</h2>
+<div style="margin-top: 28px; display: flex; flex-direction: column; gap: 18px; font-size: 19px; line-height: 1.7; color: #2F2B29">
+<p style="margin: 0">Most AI projects begin with a tool and go looking for a problem. We begin with a decision your team makes every day: who makes it, how often, with which information, and what a wrong call costs.</p>
+<p style="margin: 0">Where the logic is clear, we write it as code. Code is cheaper to run, gives the same answer every time and can be audited line by line. We bring in AI only where people today read messy emails and documents or weigh options, and we put firm limits around it.</p>
+<p style="margin: 0">Above everything sits one orchestrator. It watches each process and tells your manager, in plain language, what was decided and what needs a person.</p>
+</div>
+<div style="margin-top: 36px; display: flex; align-items: center; gap: 14px">
+<img src="/assets/elev8x-mark.svg" alt="" style="display: block; height: 40px; width: auto">
+<div>
+<div style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 500; font-size: 22px">Tihomir Yordanov</div>
+<div style="font-size: 13.5px; color: #66605B">Founder, Elev8x</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="approach" style="padding: 112px 0; background: #F6F5F3; border-top: 1px solid #E7E4E0; border-bottom: 1px solid #E7E4E0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 760px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">What we build</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.015em; color: #231F20">Three ways we take work off your team.</h2>
+<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6; color: #3D3836">Start with one decision. Connect it to the orchestrator. Grow into whole roles once the numbers prove it.</p>
+</div>
+<div style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 20px">
+<article style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px; padding: 30px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="width: 48px; height: 48px; border-radius: 14px; background: #FEF1DC; color: #8C5A0E; display: inline-flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><path d="M3 12h6l4-5h5"></path><path d="M13 17h5"></path><path d="M9 12l4 5"></path><path d="M16 4l3 3-3 3"></path><path d="M16 14l3 3-3 3"></path></svg></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">01</span>
+</div>
+<h3 style="margin: 8px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 26px; line-height: 1.2">Decision automation</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D3836">We turn the decisions your team makes every day into software: which carrier gets the load, whether an order is complete, whether an invoice is right. Clear logic runs as code, judgment on messy input goes to AI, the rest to a person.</p>
+<div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #F0EEEB; font-size: 14px; line-height: 1.6; color: #5A5450"><span style="font-weight: 600; color: #231F20">Typical: </span>carrier selection, order validation, quote pricing, invoice approval</div>
+</article>
+<article style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px; padding: 30px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="width: 48px; height: 48px; border-radius: 14px; background: #FEF1DC; color: #8C5A0E; display: inline-flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 3v3"></path><path d="M12 18v3"></path><path d="M3 12h3"></path><path d="M18 12h3"></path></svg></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">02</span>
+</div>
+<h3 style="margin: 8px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 26px; line-height: 1.2">The orchestrator</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D3836">One AI supervisor above all your automations. It watches every process, catches failures and anomalies, routes exceptions to the right person and sends your managers a daily briefing.</p>
+<div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #F0EEEB; font-size: 14px; line-height: 1.6; color: #5A5450"><span style="font-weight: 600; color: #231F20">Typical: </span>failure alerts, anomaly checks, escalation routing, daily briefing</div>
+</article>
+<article style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px; padding: 30px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="width: 48px; height: 48px; border-radius: 14px; background: #FEF1DC; color: #8C5A0E; display: inline-flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><circle cx="9" cy="8" r="3.5"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><path d="M16 8h5"></path><path d="M16 12h5"></path><path d="M18 16h3"></path></svg></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">03</span>
+</div>
+<h3 style="margin: 8px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 26px; line-height: 1.2">Digital roles</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D3836">When a position is mostly routine decisions, we automate the whole role, from reading the request to closing the case. Your team keeps the exceptions and the customer relationships.</p>
+<div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #F0EEEB; font-size: 14px; line-height: 1.6; color: #5A5450"><span style="font-weight: 600; color: #231F20">Typical: </span>freight dispatcher, order intake clerk, invoice checker, station back office</div>
+</article>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="flow-title" style="padding: 112px 0; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 760px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">How a decision gets made</p>
+<h2 id="flow-title" style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.015em; color: #231F20">Every decision takes the cheapest safe path.</h2>
+<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6; color: #3D3836">Code where the logic is clear, AI where the input is messy, people only for the exceptions.</p>
+</div>
+<ol style="margin: 48px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 14px">
+<li style="flex: 1 1 200px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 24px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">01</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Input</span></div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3">Input arrives</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D3836">Emails, PDFs, portals, spreadsheets or your ERP. Nothing changes for the sender.</p>
+</li>
+<li style="flex: 1 1 200px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 24px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">02</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Code</span></div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3">Rules check it</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D3836">Limits, policies and validation run as plain code. Same input, same result, every time.</p>
+</li>
+<li style="flex: 1 1 200px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 24px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">03</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #ECEEFB; color: #3346A8; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">AI</span></div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3">AI weighs the messy part</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D3836">Only where text is unstructured or options need weighing: reading a request, scoring carriers.</p>
+</li>
+<li style="flex: 1 1 200px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 24px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">04</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Code</span></div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3">The decision executes</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D3836">Inside the guardrails you set, the system acts: it books, posts, approves or replies.</p>
+</li>
+<li style="flex: 1 1 200px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 24px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #66605B">05</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Human</span></div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3">People get the exceptions</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D3836">Anything outside the rules lands with the right person, with the full context attached.</p>
+</li>
+</ol>
+<div style="margin-top: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding: 18px 22px; border-radius: 18px; background: #1E1B19; color: #F4F2EF">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 22px; width: 22px; height: 22px; fill: none; stroke: #F9A11B; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 3v3"></path><path d="M12 18v3"></path><path d="M3 12h3"></path><path d="M18 12h3"></path></svg>
+<p style="margin: 0; flex: 1 1 300px; font-size: 15.5px; line-height: 1.5">The orchestrator records every step: the input, the rule or model that decided, the outcome and who approved it.</p>
+</div>
+</div>
+</section>
+
+<section id="orchestrator" style="padding: 112px 0; background: #1E1B19; color: #F4F2EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 420px; min-width: 0">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #BDB6AF">The orchestrator</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.015em; color: #FFFFFF">One AI watching every process. One report on your manager’s desk.</h2>
+<p style="margin: 18px 0 0; font-size: 18px; line-height: 1.6; color: #BDB6AF">As automations multiply, someone has to watch them. The orchestrator is an AI supervisor that checks every run, spots what looks wrong and keeps your managers informed, without another dashboard to babysit.</p>
+<ul style="margin: 36px 0 0; padding: 0; list-style: none; border-top: 1px solid #34302D">
+<li style="display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 18px 0; border-bottom: 1px solid #34302D"><span style="flex: 0 0 96px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #F9A11B">Watch</span><span style="flex: 1 1 240px; font-size: 15.5px; line-height: 1.55; color: #DAD5CF">Checks every run, queue and error, around the clock.</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 18px 0; border-bottom: 1px solid #34302D"><span style="flex: 0 0 96px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #F9A11B">Escalate</span><span style="flex: 1 1 240px; font-size: 15.5px; line-height: 1.55; color: #DAD5CF">Sends only real exceptions to the right person, with the context to decide fast.</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 18px 0; border-bottom: 1px solid #34302D"><span style="flex: 0 0 96px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #F9A11B">Report</span><span style="flex: 1 1 240px; font-size: 15.5px; line-height: 1.55; color: #DAD5CF">A daily briefing and a weekly summary for the manager, in plain language.</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 18px 0; border-bottom: 1px solid #34302D"><span style="flex: 0 0 96px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #F9A11B">Prove</span><span style="flex: 1 1 240px; font-size: 15.5px; line-height: 1.55; color: #DAD5CF">An audit trail for every decision: input, rule or model, outcome.</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 460px; min-width: 0">
+<figure aria-label="Sample orchestrator console" style="margin: 0; background: #262220; border: 1px solid #3A3532; border-radius: 22px; overflow: hidden; font-family: 'JetBrains Mono', ui-monospace, monospace">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #3A3532; font-size: 12.5px; color: #BDB6AF">
+<span style="display: inline-flex; align-items: center; gap: 10px"><img src="/assets/elev8x-mark.svg" alt="" style="display: block; height: 18px; width: auto">orchestrator / today</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; color: #6FD49A"><span style="width: 8px; height: 8px; border-radius: 50%; background: #6FD49A"></span>live</span>
+</div>
+<div style="padding: 6px 18px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 11px 0; border-bottom: 1px solid #312C29; font-size: 13px"><span style="flex: 1 1 170px; color: #F4F2EF">freight-enquiries</span><span style="flex: 0 0 auto; color: #A39B93">46 runs</span><span style="flex: 0 0 120px; text-align: right; color: #6FD49A">running</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 11px 0; border-bottom: 1px solid #312C29; font-size: 13px"><span style="flex: 1 1 170px; color: #F4F2EF">order-intake</span><span style="flex: 0 0 auto; color: #A39B93">112 runs</span><span style="flex: 0 0 120px; text-align: right; color: #F9A11B">2 in review</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 11px 0; border-bottom: 1px solid #312C29; font-size: 13px"><span style="flex: 1 1 170px; color: #F4F2EF">invoice-check</span><span style="flex: 0 0 auto; color: #A39B93">24 runs</span><span style="flex: 0 0 120px; text-align: right; color: #F9A11B">1 escalated</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 11px 0; border-bottom: 1px solid #312C29; font-size: 13px"><span style="flex: 1 1 170px; color: #F4F2EF">status-updates</span><span style="flex: 0 0 auto; color: #A39B93">96 runs</span><span style="flex: 0 0 120px; text-align: right; color: #6FD49A">running</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; padding: 11px 0; font-size: 13px"><span style="flex: 1 1 170px; color: #F4F2EF">station-close</span><span style="flex: 0 0 auto; color: #A39B93">2 sites</span><span style="flex: 0 0 120px; text-align: right; color: #6FD49A">running</span></div>
+</div>
+<div style="padding: 16px 18px 18px; border-top: 1px solid #3A3532; background: #211E1C; display: flex; flex-direction: column; gap: 9px; font-size: 12.5px; line-height: 1.5">
+<div style="display: flex; gap: 12px"><span style="flex: 0 0 auto; color: #A39B93">07:02</span><span style="color: #D6D0CA">freight-enquiries → 18 carriers asked for load Graz–Sofia</span></div>
+<div style="display: flex; gap: 12px"><span style="flex: 0 0 auto; color: #A39B93">07:09</span><span style="color: #D6D0CA">freight-enquiries → 6 quotes in, best one inside limit, booked</span></div>
+<div style="display: flex; gap: 12px"><span style="flex: 0 0 auto; color: #A39B93">07:15</span><span style="color: #D6D0CA">order-intake → weight missing, sent to review</span></div>
+<div style="display: flex; gap: 12px"><span style="flex: 0 0 auto; color: #A39B93">07:30</span><span style="color: #D6D0CA">briefing → sent to operations manager</span></div>
+<div style="display: flex; gap: 12px"><span style="flex: 0 0 auto; color: #A39B93">07:31</span><span style="color: #F9A11B">invoice-check → rate above contract, escalated</span></div>
+</div>
+<div style="padding: 12px 18px; border-top: 1px solid #3A3532; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #A39B93">Sample data</div>
+</figure>
+</div>
+</div>
+</section>
+
+<section id="roles" style="padding: 112px 0 72px; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 760px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Digital roles</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.015em; color: #231F20">Replace a role, not just a task.</h2>
+<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6; color: #3D3836">Some positions consist mostly of routine decisions made from emails, PDFs and portals. We automate the whole role, end to end, and your team keeps only the exceptions.</p>
+</div>
+<div role="tablist" aria-label="Example digital roles" style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 10px">
+<button type="button" class="tab" role="tab" data-tab="dispatcher" aria-selected="true">Freight dispatcher</button>
+<button type="button" class="tab" role="tab" data-tab="intake" aria-selected="false">Order intake clerk</button>
+<button type="button" class="tab" role="tab" data-tab="invoice" aria-selected="false">Invoice checker</button>
+<button type="button" class="tab" role="tab" data-tab="station" aria-selected="false">Station back office</button>
+</div>
+
+<div role="tabpanel" style="margin-top: 20px; border: 1px solid #E7E4E0; border-radius: 24px; background: #F9F8F6; padding: clamp(22px, 3vw, 36px); box-sizing: border-box">
+<div data-panel="dispatcher">
+<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 420px; min-width: 0">
+<span style="display: inline-flex; padding: 5px 12px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Built with a freight forwarder · 2 h → 17 min per enquiry</span>
+<h3 style="margin: 16px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.15">Digital freight dispatcher</h3>
+<p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: #3D3836">Runs the daily cycle of freight requests, carrier enquiries and bookings for a forwarding team.</p>
+<ul style="margin: 24px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Reads freight requests from email, PDF and customer portals</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Picks matching carriers from your network and freight exchanges</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Sends enquiries and collects quotes in English, German and Bulgarian</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Compares price, transit time and reliability, and books within your limits</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Sends confirmations and status updates to the customer</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; align-self: flex-start; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px; padding: 24px; box-sizing: border-box">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Who does what</div>
+<div style="margin-top: 18px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Code</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Carrier rules, price limits, bookings, confirmations</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #ECEEFB; color: #3346A8; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">AI</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Reading free-text requests and carrier replies, comparing quotes</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Your team</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Loads above your limit, new customers, disputes</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div data-panel="intake" hidden>
+<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 420px; min-width: 0">
+<span style="display: inline-flex; padding: 5px 12px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Example role</span>
+<h3 style="margin: 16px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.15">Digital order intake clerk</h3>
+<p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: #3D3836">Turns incoming orders in any format into clean records in your TMS or ERP.</p>
+<ul style="margin: 24px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Reads orders from email, PDF and Excel in any layout</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Validates addresses, dates, weights and prices against your rules</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Posts clean orders straight into your TMS or ERP</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Returns unclear orders to the sender with the missing fields named</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; align-self: flex-start; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px; padding: 24px; box-sizing: border-box">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Who does what</div>
+<div style="margin-top: 18px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Code</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Validation rules, duplicate checks, posting to your systems</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #ECEEFB; color: #3346A8; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">AI</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Reading orders in any layout or language</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Your team</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Unusual orders and customer calls</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div data-panel="invoice" hidden>
+<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 420px; min-width: 0">
+<span style="display: inline-flex; padding: 5px 12px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Example role</span>
+<h3 style="margin: 16px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.15">Digital invoice checker</h3>
+<p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: #3D3836">Checks every carrier and supplier invoice before it gets paid.</p>
+<ul style="margin: 24px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Matches invoices to orders and proofs of delivery</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Checks every line against agreed rates and surcharges</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Approves matches and holds mismatches with the reason stated</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Chases missing CMR and delivery documents</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; align-self: flex-start; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px; padding: 24px; box-sizing: border-box">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Who does what</div>
+<div style="margin-top: 18px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Code</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Matching, rate checks, approvals within limits</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #ECEEFB; color: #3346A8; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">AI</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Reading scanned invoices and delivery proofs</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Your team</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Disputes and supplier negotiations</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div data-panel="station" hidden>
+<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 420px; min-width: 0">
+<span style="display: inline-flex; padding: 5px 12px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em">Live with a fuel-station group · 6 h saved per week</span>
+<h3 style="margin: 16px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.15">Digital station back office</h3>
+<p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: #3D3836">Runs the daily paperwork of a fuel-station group across all its sites.</p>
+<ul style="margin: 24px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Consolidates the daily reports from every station</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Reconciles fuel deliveries against orders</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Flags cash and stock differences the same day</span></li>
+<li style="display: flex; gap: 12px; font-size: 15.5px; line-height: 1.5"><svg viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: #8C5A0E; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Sends the owner one morning summary for all sites</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; align-self: flex-start; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 18px; padding: 24px; box-sizing: border-box">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Who does what</div>
+<div style="margin-top: 18px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Code</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Consolidation, reconciliation, alerts</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #ECEEFB; color: #3346A8; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">AI</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Reading paper and PDF delivery notes</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="align-self: flex-start; display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Your team</span><span style="font-size: 15px; line-height: 1.5; color: #3D3836">Suppliers, staff and site decisions</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="Commitments" style="padding: 0 0 112px; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; gap: 1px; background: #E7E4E0; border: 1px solid #E7E4E0; border-radius: 22px; overflow: hidden">
+<div style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; padding: 30px 28px; box-sizing: border-box">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: #8C5A0E; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><path d="M3 12V4h8l10 10-8 8L3 12z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg>
+<div style="margin-top: 18px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 32px; line-height: 1.1">Fixed price</div>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: #4A4542">One fixed price for the build, then a monthly fee for monitoring and improvements.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; padding: 30px 28px; box-sizing: border-box">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: #8C5A0E; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+<div style="margin-top: 18px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 32px; line-height: 1.1">3–5 weeks</div>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: #4A4542">From the automation check to a live pilot.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; padding: 30px 28px; box-sizing: border-box">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: #8C5A0E; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><path d="M3 12h4l2-5 4 10 2-5h6"></path></svg>
+<div style="margin-top: 18px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 32px; line-height: 1.1">24/7</div>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: #4A4542">Every process watched by the orchestrator.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; padding: 30px 28px; box-sizing: border-box">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: #8C5A0E; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-0.7-8-4.5-8-9V6l8-3z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></svg>
+<div style="margin-top: 18px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 32px; line-height: 1.1">EU-hosted</div>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: #4A4542">GDPR data processing agreement, or your own servers.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="cases" style="padding: 112px 0; background: #F6F5F3; border-top: 1px solid #E7E4E0; border-bottom: 1px solid #E7E4E0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 760px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Proof</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.015em; color: #231F20">Built for real operations, measured in hours.</h2>
+<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6; color: #3D3836">Every project starts with a baseline, so the result is measured, not estimated.</p>
+</div>
+<div style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 20px">
+<article style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 14px; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px; padding: 30px; box-sizing: border-box">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #E5F4EA; color: #17663A; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2E9E5B"></span>Live</span>
+<h3 style="margin: 4px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 24px; line-height: 1.2">Multi-site fuel-station operator</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">Station back office automated: daily reports, deliveries and reconciliations across all sites, summarised for the owner every morning.</p>
+<div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #F0EEEB; display: flex; flex-wrap: wrap; gap: 18px 36px">
+<div><div style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px">6 h</div><div style="font-size: 13px; color: #66605B">saved per week</div></div>
+<div><div style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px">2</div><div style="font-size: 13px; color: #66605B">sites covered</div></div>
+</div>
+</article>
+<article style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 14px; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px; padding: 30px; box-sizing: border-box">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #FEF1DC; color: #8C5A0E; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #F9A11B"></span>In progress</span>
+<h3 style="margin: 4px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 24px; line-height: 1.2">Freight forwarder</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">Digital freight dispatcher: enquiries sent to carriers, quotes collected and compared, the best option proposed for booking.</p>
+<div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #F0EEEB; display: flex; flex-wrap: wrap; gap: 18px 36px">
+<div><div style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px">2 h → 17 min</div><div style="font-size: 13px; color: #66605B">per enquiry</div></div>
+</div>
+</article>
+<figure style="flex: 1 1 320px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; background: #1E1B19; color: #F4F2EF; border-radius: 22px; padding: 30px; box-sizing: border-box">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 28px; height: 28px; fill: none; stroke: #F9A11B; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round"><path d="M9 7H5v6h4v4H5"></path><path d="M19 7h-4v6h4v4h-4"></path></svg>
+<blockquote style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.4; color: #FFFFFF">“If an automation won’t save more than it costs, we tell you before you pay for anything.”</blockquote>
+<figcaption style="margin-top: auto; padding-top: 18px; border-top: 1px solid #34302D; font-size: 14px; color: #BDB6AF">Tihomir Yordanov, founder · our promise to every client</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section id="process" style="padding: 112px 0; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 760px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">How we work</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.015em; color: #231F20">From first call to a running digital role.</h2>
+</div>
+<ol style="margin: 48px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 20px">
+<li style="flex: 1 1 240px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #231F20">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #F9A11B; color: #231F20; display: inline-flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 21px">1</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">1–2 weeks</span></div>
+<h3 style="margin: 6px 0 0; font-size: 19px; font-weight: 600; line-height: 1.3">Free automation check</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">Two short sessions. We map one process, its decisions and their cost, and quote a fixed price.</p>
+</li>
+<li style="flex: 1 1 240px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #231F20">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #F9A11B; color: #231F20; display: inline-flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 21px">2</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">3–5 weeks</span></div>
+<h3 style="margin: 6px 0 0; font-size: 19px; font-weight: 600; line-height: 1.3">Fixed-price pilot</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">We automate that process end to end, on top of the systems you already use.</p>
+</li>
+<li style="flex: 1 1 240px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #231F20">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #F9A11B; color: #231F20; display: inline-flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 21px">3</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Before launch</span></div>
+<h3 style="margin: 6px 0 0; font-size: 19px; font-weight: 600; line-height: 1.3">Go live with guardrails</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">Limits, approvals and fallbacks are agreed with you before anything runs on its own.</p>
+</li>
+<li style="flex: 1 1 240px; min-width: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #231F20">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #F9A11B; color: #231F20; display: inline-flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 21px">4</span><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; background: #F0EEEB; color: #4A4542; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500">Monthly</span></div>
+<h3 style="margin: 6px 0 0; font-size: 19px; font-weight: 600; line-height: 1.3">Watched and improved</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3D3836">The orchestrator monitors and reports. We fix, tune and extend every month.</p>
+</li>
+</ol>
+<div style="margin-top: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; border: 1px solid #E7E4E0; border-radius: 18px; background: #F9F8F6">
+<p style="margin: 0; flex: 1 1 360px; font-size: 16px; line-height: 1.55; color: #2F2B29"><span style="font-weight: 600; color: #231F20">Fixed price for the build.</span> Then one monthly fee for orchestrator monitoring and ongoing improvements.</p>
+<a style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: #231F20; color: #FFFFFF; font-size: 15px; font-weight: 600; text-decoration: none">Start with a free check</a>
+</div>
+</div>
+</section>
+
+<section id="team" style="padding: 112px 0; background: #F6F5F3; border-top: 1px solid #E7E4E0; border-bottom: 1px solid #E7E4E0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="max-width: 760px">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">Team</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.015em; color: #231F20">Senior engineering, hands-on delivery.</h2>
+<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6; color: #3D3836">A small team on purpose: the person you talk to is the person who builds. Working across Germany, Austria, Switzerland and Bulgaria.</p>
+</div>
+<div style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 20px">
+<article style="flex: 0 1 720px; min-width: 0; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; background: #FFFFFF; border: 1px solid #E7E4E0; border-radius: 22px; padding: 30px; box-sizing: border-box">
+<div aria-hidden="true" style="flex: 0 0 84px; width: 84px; height: 84px; border-radius: 50%; background: #F9A11B; color: #231F20; display: flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 30px">TY</div>
+<div style="flex: 1 1 300px; min-width: 0">
+<h3 style="margin: 0; font-size: 21px; font-weight: 600">Tihomir Yordanov</h3>
+<div style="margin-top: 4px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12.5px; letter-spacing: 0.04em; color: #66605B">Founder and engineering lead</div>
+<p style="margin: 14px 0 0; font-size: 16px; line-height: 1.6; color: #3D3836">Senior software engineer who has built systems for a German banking group and a semiconductor maker in Austria. Designs and builds every Elev8x automation, and stays your contact from the first call to go-live.</p>
+<p style="margin: 14px 0 0; font-size: 13.5px; color: #66605B">English · German · Bulgarian</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="faq" style="padding: 112px 0; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 32px 64px">
+<div style="flex: 1 1 300px; min-width: 0">
+<p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #66605B">FAQ</p>
+<h2 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.015em; color: #231F20">Questions owners ask us.</h2>
+</div>
+<div style="flex: 2 1 520px; min-width: 0; border-top: 1px solid #E7E4E0">
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17.5px; font-weight: 600">Do we have to change our software?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">No. We connect to your TMS, ERP, mailbox and portals. Where a system has no interface, we work through its screens.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17.5px; font-weight: 600">How is it priced?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">A fixed price for each build, agreed before we start. After go-live, one monthly fee covers monitoring by the orchestrator and ongoing improvements.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17.5px; font-weight: 600">What happens when the AI is unsure?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">It does not guess. Every decision has limits, and anything outside them goes to a person with the context attached.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17.5px; font-weight: 600">Where does our data live?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">On EU servers, under a GDPR data processing agreement. On request, everything runs on your own infrastructure.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17.5px; font-weight: 600">What happens to the people in the role?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">That is your decision. A common path is moving them to exceptions, key customers and growth work while the digital role carries the routine volume.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17.5px; font-weight: 600">How soon do we see results?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">The automation check takes one to two weeks. The pilot goes live three to five weeks after that.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E4E0">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; font-size: 17.5px; font-weight: 600">Which languages do you work in?<span aria-hidden="true" style="flex: 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #8C5A0E">+</span></summary>
+<p style="margin: 0 0 22px; max-width: 640px; font-size: 16px; line-height: 1.65; color: #3D3836">English, German and Bulgarian, both with your team and in the messages the automations send.</p>
+</details>
+</div>
+</div>
+</section>
+
+<section id="contact" style="padding: 0 0 112px; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box">
+<div style="border-radius: 28px; background-color: #1E1B19; background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px); background-size: 44px 44px; color: #F4F2EF; padding: clamp(32px, 6vw, 72px); box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
+<div style="flex: 1 1 460px; min-width: 0">
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(32px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.015em; color: #FFFFFF">Which decision costs your team the most hours?</h2>
+<p style="margin: 18px 0 0; max-width: 560px; font-size: 18px; line-height: 1.6; color: #BDB6AF">Tell us in a 30-minute call. You get a map of that decision and a fixed price to automate it. No slides, no obligation.</p>
+</div>
+<div style="flex: 0 1 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
+<a style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 26px; border-radius: 999px; background: #F9A11B; color: #231F20; font-size: 16px; font-weight: 600; text-decoration: none">Book a free automation check<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #A39B93">or write to info@elev8x.eu</span>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #E7E4E0; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 36px 24px 44px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 32px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px">
+<img src="/assets/elev8x-logo.svg" alt="elev8x" style="display: block; height: 32px; width: auto">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12.5px; color: #66605B">Code first. AI where it pays.</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; font-size: 14px; color: #4A4542">
+<span>© 2026 Elev8x · elev8x.eu</span>
+<a href="#top" style="color: #4A4542">Imprint</a>
+<a href="#top" style="color: #4A4542">Privacy</a>
+<a href="/bg/" lang="bg" style="color: #4A4542">Български</a>
+<span>info@elev8x.eu</span>
+</div>
+</div>
+</footer>
+
+</div>
+
+<script>
+document.querySelectorAll('[data-tab]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var id = btn.getAttribute('data-tab');
+    document.querySelectorAll('[data-tab]').forEach(function (b) {
+      b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+    });
+    document.querySelectorAll('[data-panel]').forEach(function (p) {
+      p.hidden = p.getAttribute('data-panel') !== id;
+    });
+  });
+});
+</script>
+</body>
+</html>
