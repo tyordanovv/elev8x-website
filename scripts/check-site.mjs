@@ -29,6 +29,14 @@ const exists = (path) => {
   return existsSync(p) && statSync(p).isFile() ? true : existsSync(join(p, 'index.html'));
 };
 
+// Visible text of an element, one space between text nodes, without scripts and styles.
+const visibleText = (node) =>
+  node.childNodes
+    .map((c) => (c.nodeType === 3 ? c.text : ['SCRIPT', 'STYLE', 'TEMPLATE'].includes(c.tagName) ? '' : visibleText(c)))
+    .join(' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
 const errors = [];
 const warnings = [];
 const titles = new Map();
@@ -101,8 +109,11 @@ for (const file of files) {
     }
   }
 
-  const visible = root.querySelector('body')?.text ?? '';
-  if (/\bTODO\b/.test(visible)) (allowTodo ? warnings : errors).push(`${url}: contains a TODO placeholder`);
+  // Join text nodes with spaces: minified HTML has no whitespace between tags,
+  // so .text would glue "Impressum" and "TODO" into one word and hide the placeholder.
+  const body = root.querySelector('body');
+  const todoEl = body?.querySelectorAll('*').filter((el) => !['SCRIPT', 'STYLE', 'TEMPLATE'].includes(el.tagName) && /\bTODO\b/.test(visibleText(el))).pop();
+  if (todoEl) (allowTodo ? warnings : errors).push(`${url}: ${visibleText(todoEl).slice(0, 240)}`);
 }
 
 for (const [t, urls] of titles) if (urls.length > 1) errors.push(`duplicate <title> "${t}": ${urls.join(', ')}`);
@@ -128,5 +139,12 @@ for (const [url, { noindex }] of pages) {
 
 for (const w of warnings) console.warn(`warn  ${w}`);
 for (const e of errors) console.error(`error ${e}`);
+
+// On GitHub Actions, also emit annotations so the reason shows on the PR's checks page.
+if (process.env.GITHUB_ACTIONS === 'true') {
+  const esc = (s) => s.replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A');
+  for (const w of warnings) console.log(`::warning title=Site check::${esc(w)}`);
+  for (const e of errors) console.log(`::error title=Site check::${esc(e)}`);
+}
 console.log(`\nChecked ${files.length} HTML files: ${errors.length} error(s), ${warnings.length} warning(s).`);
 process.exit(errors.length ? 1 : 0);
