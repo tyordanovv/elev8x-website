@@ -1,0 +1,23 @@
+{
+  "name": "elev8x-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check:site": "node scripts/check-site.mjs",
+    "og": "node scripts/make-og.mjs",
+    "ci": "npm run build && npm run check:site"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
+    "@fontsource-variable/inter": "^5.2.0",
+    "@fontsource/jetbrains-mono": "^5.2.0",
+    "@fontsource/source-serif-4": "^5.2.0",
+    "astro": "^5.15.0"
+  },
+  "devDependencies": {
+    "node-html-parser": "^7.0.1"
+  }
+}

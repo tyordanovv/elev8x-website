@@ -1,0 +1,228 @@
+---
+import { render } from 'astro:content';
+import { site, missingLegalFields } from '../config/site';
+import { t } from '../i18n/ui';
+import { childrenOf, pagesByKeys, href, type Page } from '../lib/pages';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Owners from './Owners.astro';
+import FlowDiagram from './FlowDiagram.astro';
+import Pipeline from './Pipeline.astro';
+import PageCard from './PageCard.astro';
+import Faq from './Faq.astro';
+import Cta from './Cta.astro';
+import Icon from './Icon.astro';
+import { team } from '../data/team';
+
+interface Props {
+  page: Page;
+  crumbs: { name: string; path: string }[];
+}
+const { page, crumbs } = Astro.props;
+const d = page.data;
+const lang = d.lang;
+const s = t(lang);
+const { Content } = await render(page);
+
+const kids = d.type === 'hub' ? await childrenOf(page) : [];
+const related = await pagesByKeys(d.related, lang);
+const caseRef = d.caseKey ? (await pagesByKeys([d.caseKey], lang))[0] : undefined;
+const contactPath = await href('contact', lang);
+const status =
+  d.status === 'live' ? s.statusLive : d.status === 'progress' ? s.statusProgress : d.status === 'own' ? s.statusOwn : null;
+const isLegal = d.type === 'legal';
+const isPlain = d.type === 'page' || isLegal;
+const hasAside = Boolean(d.owners || d.facts || (!isPlain && d.type !== 'hub'));
+const missing = d.key === 'imprint' ? missingLegalFields() : [];
+const mailSubject = encodeURIComponent(s.bookCheck);
+---
+
+<section class="hero hero--page">
+  <div class="container">
+    <div class="page-head">
+      <Breadcrumbs lang={lang} items={crumbs} />
+      {d.eyebrow && <p class="eyebrow" style="margin-top:20px">{d.eyebrow}</p>}
+      <h1 class="h1">{d.h1}</h1>
+      {d.lead && <p class="lead lead--lg">{d.lead}</p>}
+      {status && <span class={`pill pill--${d.status}`}>{status}</span>}
+      {!status && d.badge && <span class={`badge ${d.badge === s.exampleRole ? 'badge--neutral' : ''}`}>{d.badge}</span>}
+      {d.results?.length && (
+        <div class="results-inline">
+          {d.results.map((r) => (
+            <div>
+              <div class="stat__value">{r.value}</div>
+              <div class="stat__label">{r.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+      {!isPlain && (
+        <div class="btn-row" style="margin-top:32px">
+          <a class="btn btn--primary btn--lg" href={contactPath}>{s.bookCheck}<Icon name="arrow" /></a>
+          {caseRef && <a class="btn btn--secondary btn--lg" href={caseRef.data.path}>{s.readCase}</a>}
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+{kids.length > 0 && (
+  <section class="section section--compact">
+    <div class="container">
+      <div class="cards" style="margin-top:0">
+        {kids.map((k) => <PageCard page={k} />)}
+      </div>
+    </div>
+  </section>
+)}
+
+{(d.flow || d.pipeline) && (
+  <section class="section section--compact section--alt">
+    <div class="container">
+      {d.flow && <FlowDiagram lang={lang} flow={d.flow} />}
+      {d.pipeline && <Pipeline lang={lang} pipeline={d.pipeline} />}
+    </div>
+  </section>
+)}
+
+<section class={`section ${kids.length || d.flow || d.pipeline ? 'section--compact' : ''}`}>
+  <div class={`container ${hasAside ? 'detail' : 'container--text'}`}>
+    <div>
+      {d.steps && (
+        <div class="block">
+          <h2 class="block__title">{d.steps.title}</h2>
+          <ul class="checklist">
+            {d.steps.items.map((i) => (
+              <li><Icon name="check" /><span>{i}</span></li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {d.key === 'imprint' && (
+        <div class="block">
+          {missing.length > 0 && (
+            <p class="panel" style="border-color:#e4a1a1;background:#fbebeb">
+              TODO: fill these fields in src/config/site.ts before publishing: {missing.join(', ')}
+            </p>
+          )}
+          <dl class="legal-dl">
+            <dt>{lang === 'de' ? 'Firma' : lang === 'bg' ? 'Фирма' : 'Company'}</dt>
+            <dd>{site.legalName || site.name}{site.legalForm ? ` (${site.legalForm})` : ''}</dd>
+            {site.address.street && (
+              <>
+                <dt>{lang === 'de' ? 'Anschrift' : lang === 'bg' ? 'Адрес' : 'Address'}</dt>
+                <dd>{site.address.street}, {site.address.postalCode} {site.address.city}, {site.address.country}</dd>
+              </>
+            )}
+            {site.managingDirector && (
+              <>
+                <dt>{lang === 'de' ? 'Geschäftsführer' : lang === 'bg' ? 'Управител' : 'Managing director'}</dt>
+                <dd>{site.managingDirector}</dd>
+              </>
+            )}
+            {site.registry.id && (
+              <>
+                <dt>{lang === 'de' ? 'Handelsregister' : lang === 'bg' ? 'Търговски регистър' : 'Commercial register'}</dt>
+                <dd>{lang === 'bg' ? 'ЕИК' : 'UIC (ЕИК)'} {site.registry.id}</dd>
+              </>
+            )}
+            {site.vatId && (
+              <>
+                <dt>{lang === 'de' ? 'USt-IdNr.' : lang === 'bg' ? 'ДДС номер' : 'VAT ID'}</dt>
+                <dd>{site.vatId}</dd>
+              </>
+            )}
+            <dt>E-mail</dt>
+            <dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
+            {site.phone && (
+              <>
+                <dt>{lang === 'de' ? 'Telefon' : lang === 'bg' ? 'Телефон' : 'Phone'}</dt>
+                <dd>{site.phone}</dd>
+              </>
+            )}
+          </dl>
+        </div>
+      )}
+
+      {d.key === 'about' && (
+        <div class="block">
+          <div class="cards" style="margin-top:0">
+            {team(lang).map((m) => (
+              <article class="person">
+                <div class="person__avatar" aria-hidden="true">{m.initials}</div>
+                <div class="person__body">
+                  <h2 style="margin:0;font-size:21px;font-weight:600">{m.name}</h2>
+                  <div class="person__role">{m.role}</div>
+                  <p>{m.bio}</p>
+                  <p class="person__langs">{m.langs}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {d.key === 'contact' && (
+        <div class="block contact-grid">
+          <div class="panel">
+            <h2 class="panel__title">E-mail</h2>
+            <p style="margin:14px 0 18px;font-size:18px;font-weight:600"><a href={`mailto:${site.email}?subject=${mailSubject}`}>{site.email}</a></p>
+            <a class="btn btn--primary" href={`mailto:${site.email}?subject=${mailSubject}`}>{s.bookCheck}<Icon name="arrow" /></a>
+          </div>
+          {site.bookingUrl && (
+            <div class="panel">
+              <h2 class="panel__title">{s.bookCall}</h2>
+              <p style="margin:14px 0 18px">30 min</p>
+              <a class="btn btn--accent" href={site.bookingUrl} rel="noopener">{s.bookCall}<Icon name="arrow" /></a>
+            </div>
+          )}
+        </div>
+      )}
+
+      <div class={`prose ${isLegal ? 'prose--legal' : ''} ${d.steps || ['contact', 'imprint', 'about'].includes(d.key) ? 'block' : ''}`}>
+        <Content />
+      </div>
+    </div>
+
+    {hasAside && (
+      <aside class="detail__aside">
+        {d.facts && (
+          <div class="panel panel--soft">
+            <h2 class="panel__title">{s.atAGlance}</h2>
+            <dl class="facts">
+              {d.facts.map((f) => (
+                <div>
+                  <dt>{f.label}</dt>
+                  <dd>{f.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )}
+        {d.owners && <Owners lang={lang} owners={d.owners} />}
+        {!isPlain && (
+          <div class="panel">
+            <p style="margin:0;font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.25">{s.ctaTitle}</p>
+            <p style="margin:10px 0 18px;font-size:15px;line-height:1.55;color:var(--text)">{s.ctaText}</p>
+            <a class="btn btn--primary" href={contactPath}>{s.bookCall}<Icon name="arrow" /></a>
+          </div>
+        )}
+      </aside>
+    )}
+  </div>
+</section>
+
+{related.length > 0 && (
+  <section class="section section--compact section--alt">
+    <div class="container">
+      <p class="eyebrow">{s.related}</p>
+      <div class="related" style="margin-top:20px">
+        {related.map((r) => <PageCard page={r} />)}
+      </div>
+    </div>
+  </section>
+)}
+
+{d.faq?.length && <Faq lang={lang} items={d.faq} />}
+
+{!isLegal && d.key !== 'contact' && <Cta lang={lang} />}

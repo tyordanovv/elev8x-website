@@ -1,0 +1,19 @@
+---
+import type { Lang } from '../config/site';
+import { t } from '../i18n/ui';
+interface Props {
+  lang: Lang;
+  owners: { code: string; ai: string; team: string };
+}
+const { lang, owners } = Astro.props;
+const s = t(lang);
+---
+
+<div class="panel">
+  <h2 class="panel__title">{s.whoDoesWhat}</h2>
+  <ul class="owners">
+    <li><span class="pill pill--code">{s.ownerCode}</span><span>{owners.code}</span></li>
+    <li><span class="pill pill--ai">{s.ownerAi}</span><span>{owners.ai}</span></li>
+    <li><span class="pill pill--team">{s.ownerTeam}</span><span>{owners.team}</span></li>
+  </ul>
+</div>
