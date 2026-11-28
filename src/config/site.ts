@@ -7,23 +7,33 @@ export const site = {
   url: 'https://elev8x.eu',
   email: 'info@elev8x.eu',
 
-  // Legal details for the Imprint (E-Commerce Directive, Art. 5)
-  legalName: '', // TODO: registered company name, e.g. "Elev8x EOOD"
-  legalForm: '', // TODO: e.g. "EOOD" / "OOD"
+  // Legal details for the Imprint (E-Commerce Directive, Art. 5), as entered in the
+  // Commercial Register (ЕИК 207553468). The company is registered in Cyrillic; the
+  // English and German pages show the official transliteration next to it.
+  legalName: 'ELEVEYTEKS EOOD',
+  legalNameRegistered: '„ЕЛЕВЕЙТЕКС“ ЕООД',
+  legalForm: 'EOOD',
   address: {
-    street: '', // TODO
-    postalCode: '', // TODO
-    city: '', // TODO
+    street: 'zh.k. Vazrazhdane, bl. 1A, vh. 2, et. 5',
+    postalCode: '8000',
+    city: 'Burgas',
     country: 'Bulgaria',
     countryCode: 'BG',
   },
   registry: {
     name: 'Commercial Register of the Republic of Bulgaria',
-    id: '', // TODO: ЕИК / UIC
+    id: '207553468',
   },
-  vatId: '', // TODO: BG + ЕИК, if VAT-registered
-  managingDirector: '', // TODO: name of the managing director
+  vatId: '', // BG + ЕИК, only if the company is VAT-registered
+  managingDirector: 'Tihomir Kirilov Yordanov',
   phone: '', // optional
+
+  // The same details in Bulgarian, as registered, for the Bulgarian pages.
+  bg: {
+    street: 'ж.к. „Възраждане“, бл. 1А, вх. 2, ет. 5',
+    city: 'Бургас',
+    managingDirector: 'Тихомир Кирилов Йорданов',
+  },
 
   // Where "Book a call" buttons lead. Empty = the contact page offers email only.
   bookingUrl: '', // e.g. a Cal.com or Microsoft Bookings link with an EU DPA
@@ -61,4 +71,28 @@ export function missingLegalFields(): string[] {
   if (!site.registry.id) missing.push('registry.id (ЕИК)');
   if (!site.managingDirector) missing.push('managingDirector');
   return missing;
+}
+
+/** Imprint and footer details in the page's language. */
+export function legalFor(lang: Lang) {
+  const bg = lang === 'bg';
+  return {
+    name: bg ? site.legalNameRegistered : `${site.legalName} (${site.legalNameRegistered})`,
+    shortName: bg ? site.legalNameRegistered : site.legalName,
+    form: {
+      en: 'sole-owner limited liability company under Bulgarian law',
+      de: 'Einpersonen-GmbH nach bulgarischem Recht',
+      bg: 'еднолично дружество с ограничена отговорност',
+    }[lang],
+    street: bg ? site.bg.street : site.address.street,
+    postalCode: site.address.postalCode,
+    city: bg ? site.bg.city : site.address.city,
+    country: { en: 'Bulgaria', de: 'Bulgarien', bg: 'България' }[lang],
+    director: bg ? site.bg.managingDirector : site.managingDirector,
+    register: {
+      en: 'Commercial Register of the Republic of Bulgaria',
+      de: 'Handelsregister der Republik Bulgarien',
+      bg: 'Търговски регистър към Агенцията по вписванията',
+    }[lang],
+  };
 }

@@ -1,5 +1,5 @@
 ---
-import { site, type Lang } from '../config/site';
+import { site, legalFor, type Lang } from '../config/site';
 import { t } from '../i18n/ui';
 import { pageByKey } from '../lib/pages';
 
@@ -29,10 +29,9 @@ const cols = [
   { title: s.footerCompany, items: await links(['case-studies', 'how-we-work', 'about', 'contact', 'imprint', 'privacy']) },
 ];
 const year = new Date().getFullYear();
-const holder = site.legalName || site.name;
-const addr = [site.address.street, [site.address.postalCode, site.address.city].filter(Boolean).join(' '), site.address.street ? site.address.country : '']
-  .filter(Boolean)
-  .join(', ');
+const legal = legalFor(lang);
+// The full address stays on the Imprint page; the footer shows the company and city.
+const holder = site.legalName ? `${site.name} · ${legal.shortName}, ${legal.city}` : site.name;
 ---
 
 <footer class="footer">
@@ -54,7 +53,7 @@ const addr = [site.address.street, [site.address.postalCode, site.address.city].
     ))}
   </div>
   <div class="container footer__bottom">
-    <span>© {year} {holder}{addr ? ` · ${addr}` : ''}</span>
+    <span>© {year} {holder}</span>
     <span>
       {alternates
         .filter((a) => a.lang !== lang)

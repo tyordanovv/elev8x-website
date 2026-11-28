@@ -19,7 +19,7 @@ function organization() {
     knowsLanguage: [...site.languages],
     slogan: 'Code first. AI where it pays.',
   };
-  if (site.legalName) org.legalName = site.legalName;
+  if (site.legalName) org.legalName = site.legalNameRegistered.replace(/[„“]/g, '');
   if (site.vatId) org.vatID = site.vatId;
   if (site.address.street) {
     org.address = {

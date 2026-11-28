@@ -1,6 +1,6 @@
 ---
 import { render } from 'astro:content';
-import { site, missingLegalFields } from '../config/site';
+import { site, missingLegalFields, legalFor } from '../config/site';
 import { t } from '../i18n/ui';
 import { childrenOf, pagesByKeys, href, type Page } from '../lib/pages';
 import Breadcrumbs from './Breadcrumbs.astro';
@@ -33,6 +33,7 @@ const isLegal = d.type === 'legal';
 const isPlain = d.type === 'page' || isLegal;
 const hasAside = Boolean(d.owners || d.facts || (!isPlain && d.type !== 'hub'));
 const missing = d.key === 'imprint' ? missingLegalFields() : [];
+const legal = legalFor(lang);
 const mailSubject = encodeURIComponent(s.bookCheck);
 
 // Illustration shown with each case study's diagram (files in public/assets/illustrations/).
@@ -115,23 +116,23 @@ const illustration = caseImages[d.key] ?? '/assets/illustrations/hero.svg';
           )}
           <dl class="legal-dl">
             <dt>{lang === 'de' ? 'Firma' : lang === 'bg' ? 'Фирма' : 'Company'}</dt>
-            <dd>{site.legalName || site.name}{site.legalForm ? ` (${site.legalForm})` : ''}</dd>
+            <dd>{site.legalName ? <>{legal.name}<br />{legal.form}</> : site.name}</dd>
             {site.address.street && (
               <>
                 <dt>{lang === 'de' ? 'Anschrift' : lang === 'bg' ? 'Адрес' : 'Address'}</dt>
-                <dd>{site.address.street}, {site.address.postalCode} {site.address.city}, {site.address.country}</dd>
+                <dd>{legal.street}, {legal.postalCode} {legal.city}, {legal.country}</dd>
               </>
             )}
             {site.managingDirector && (
               <>
                 <dt>{lang === 'de' ? 'Geschäftsführer' : lang === 'bg' ? 'Управител' : 'Managing director'}</dt>
-                <dd>{site.managingDirector}</dd>
+                <dd>{legal.director}</dd>
               </>
             )}
             {site.registry.id && (
               <>
                 <dt>{lang === 'de' ? 'Handelsregister' : lang === 'bg' ? 'Търговски регистър' : 'Commercial register'}</dt>
-                <dd>{lang === 'bg' ? 'ЕИК' : 'UIC (ЕИК)'} {site.registry.id}</dd>
+                <dd>{legal.register}, {lang === 'bg' ? 'ЕИК' : 'UIC (ЕИК)'} {site.registry.id}</dd>
               </>
             )}
             {site.vatId && (
