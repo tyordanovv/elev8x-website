@@ -2,15 +2,15 @@
 lang: de
 key: invoice-checker
 type: role
-path: /de/digitale-mitarbeiter/rechnungspruefung/
-parent: digital-roles
+path: /de/loesungen/rechnungspruefung/
+parent: solutions
 order: 3
 title: "Frachtrechnungsprüfung automatisieren | Elev8x"
 description: "Der digitale Rechnungsprüfer gleicht jede Rechnung von Frachtführern und Lieferanten mit Aufträgen, Abliefernachweisen und Vertragspreisen ab, ohne neues TMS."
 nav: "Digitaler Rechnungsprüfer"
 summary: "Prüft jede Rechnung gegen Aufträge und vereinbarte Preise, bevor sie bezahlt wird."
-badge: "Beispielrolle"
-eyebrow: "Digitaler Mitarbeiter"
+badge: "Beispiellösung"
+eyebrow: "Lösung"
 h1: "Digitaler Rechnungsprüfer: automatisierte Frachtrechnungsprüfung"
 lead: "Prüft jede Rechnung von Frachtführern und Lieferanten gegen Aufträge, Abliefernachweise und vereinbarte Preise, bevor sie bezahlt wird, auf den Systemen, die Sie bereits haben."
 steps:

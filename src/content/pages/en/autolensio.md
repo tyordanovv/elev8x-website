@@ -12,12 +12,12 @@ summary: "Sign-ups get personal follow-ups, and customer calls become approved t
 status: own
 eyebrow: "Case study · Software and SaaS"
 h1: "Autolensio: from customer call to deployed fix"
-lead: "Autolensio is our own data platform for car dealers in Bulgaria. It runs the full Elev8x approach in production: onboarding and follow-up emails, call analysis that turns feedback into tasks, and an orchestrator that has AI agents fix, test and deploy the approved work."
+lead: "Autolensio is our own data platform for car dealers in Bulgaria. It runs the full Elev8x approach in production: onboarding and follow-up emails, call analysis that turns feedback into tasks, and a digital worker that has AI agents fix, test and deploy the approved work."
 facts:
   - { label: "Product", value: "Autolensio, automotive data platform" }
   - { label: "Users", value: "Car dealers in Bulgaria" }
   - { label: "Processes", value: "Onboarding, follow-ups, feedback to deployment" }
-  - { label: "Digital roles", value: "Customer success assistant, developer agent, QA agent" }
+  - { label: "AI agents", value: "Customer success assistant, developer agent, QA agent" }
   - { label: "Human in the loop", value: "The customer manager approves every task" }
   - { label: "Status", value: "Running on our own product" }
 pipeline:
@@ -38,11 +38,11 @@ pipeline:
         - { name: "Accepted or adjusted", owner: team, who: "Customer manager" }
     - label: "Every approved task"
       steps:
-        - { name: "Orchestrator picks up tasks that meet the criteria", owner: ai, who: "Orchestrator" }
+        - { name: "The digital worker picks up tasks that meet the criteria", owner: ai, who: "Digital worker" }
         - { name: "Developer agent writes the fix", owner: ai }
         - { name: "QA agent tests it", owner: ai }
         - { name: "Deployed", owner: code }
-related: ["customer-success", "ai-orchestrator", "decision-automation", "digital-roles"]
+related: ["customer-success", "digital-worker", "decision-automation", "solutions"]
 published: 2026-11-27
 updated: 2026-11-27
 ---
@@ -57,7 +57,7 @@ Two things cost a growing SaaS business the most: new users who sign up and hear
 
 **Feedback that turns into tasks.** After each customer manager call, AI analyses the conversation and drafts tasks and defect reports. The customer manager accepts or adjusts them, so nothing is created without a person’s approval.
 
-**Tasks that turn into deployed fixes.** Approved tasks that meet the set criteria are picked up by the orchestrator. A developer agent writes the fix, a QA agent tests it, and the change is deployed.
+**Tasks that turn into deployed fixes.** Approved tasks that meet the set criteria are picked up by the digital worker. A developer agent writes the fix, a QA agent tests it, and the change is deployed.
 
 ## The result for the business
 

@@ -6,9 +6,9 @@ path: /de/branchen/tankstellen/
 parent: industries
 order: 3
 title: "Backoffice-Automatisierung für Tankstellenbetreiber | Elev8x"
-description: "Tagesberichte, Lieferungen, Kassen- und Bestandsprüfung, automatisiert für Tankstellenbetreiber mit mehreren Standorten. Im Einsatz: 6 Stunden pro Woche gespart."
+description: "Tagesberichte, Kraftstofflieferungen, Bargeldabholungen und Bestandsprüfung, automatisiert für Tankstellenbetreiber. Im Einsatz: 6 Stunden pro Woche gespart."
 nav: "Tankstellenbetreiber"
-summary: "Tagesberichte, Lieferabgleich und Kassen- und Bestandsprüfung für Betreiber mit mehreren Standorten."
+summary: "Tagesberichte, Kraftstofflieferungen, Bargeldabholungen und Bestandsprüfung für Betreiber mit mehreren Standorten."
 eyebrow: "Branche"
 h1: "Backoffice-Automatisierung für Tankstellenbetreiber"
 lead: "Tagesberichte, Kraftstofflieferungen, Kasse und Bestand: Der Papierkram eines Betreibers mit mehreren Standorten folgt jeden Tag denselben Regeln. Im Einsatz bei einem Tankstellenbetreiber spart unser digitales Backoffice 6 Stunden pro Woche an 2 Standorten."
@@ -19,11 +19,12 @@ steps:
   title: "Wo Tankstellenbetreiber die meisten Stunden verlieren"
   items:
     - "Tagesberichte aller Standorte einsammeln und zusammenführen"
-    - "Kraftstofflieferungen mit Bestellungen abgleichen, oft anhand von Lieferscheinen auf Papier"
+    - "Kraftstofflieferungen im System verbuchen und abgleichen, oft anhand von Lieferscheinen auf Papier"
+    - "Die Bargeldabholungen aller Standorte erfassen"
     - "Kassen- und Bestandsdifferenzen finden, oft erst Wochen später"
     - "Dem Inhaber ein Gesamtbild des Geschäfts liefern"
 caseKey: "fuel-station-back-office"
-related: ["station-back-office", "fuel-station-back-office", "ai-orchestrator", "decision-automation"]
+related: ["station-back-office", "fuel-station-back-office", "digital-worker", "decision-automation"]
 faq:
   - q: "Unsere Lieferscheine sind auf Papier. Funktioniert das?"
     a: "Ja. KI liest Lieferscheine auf Papier und als PDF, der Abgleich läuft als Code."
@@ -35,7 +36,7 @@ faq:
 
 ## Was wir für Tankstellenbetreiber automatisieren
 
-Das [digitale Tankstellen-Backoffice](/de/digitale-mitarbeiter/tankstellen-backoffice/) fasst die Tagesberichte aller Standorte zusammen, gleicht Kraftstofflieferungen mit den Bestellungen ab, meldet Kassen- und Bestandsdifferenzen am selben Tag und schickt dem Inhaber jeden Morgen eine Übersicht.
+Das [digitale Tankstellen-Backoffice](/de/loesungen/tankstellen-backoffice/) fasst die Tagesberichte aller Standorte zusammen, verbucht Kraftstofflieferungen und gleicht sie mit den Bestellungen ab, erfasst die Bargeldabholungen, meldet Kassen- und Bestandsdifferenzen am selben Tag und schickt dem Inhaber jeden Morgen eine Übersicht.
 
 ## Was sich für Ihr Unternehmen ändert
 

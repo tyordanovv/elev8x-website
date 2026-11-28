@@ -13,7 +13,7 @@ eyebrow: "Branche"
 h1: "KI-Automatisierung für Speditionen"
 lead: "Frachtanfragen, Angebote, Auftragserfassung und Rechnungsprüfung: Der Alltag eines Speditionsteams besteht aus Entscheidungen, die sich automatisieren lassen. Bei einer Spedition sank die Zeit pro Anfrage von 2 Stunden auf 17 Minuten."
 results:
-  - { value: "2 h → 17 min", label: "pro Frachtanfrage" }
+  - { value: "17 min", label: "pro Frachtanfrage statt 2 Stunden" }
 steps:
   title: "Wo Speditionen die meisten Stunden verlieren"
   items:
@@ -35,9 +35,9 @@ faq:
 
 ## Was wir für Speditionen automatisieren
 
-- **[Frachtanfragen und Angebote](/de/digitale-mitarbeiter/disponent/):** Anfragen gelesen, Frachtführer angefragt, Angebote verglichen und innerhalb Ihrer Limits gebucht.
-- **[Auftragserfassung](/de/digitale-mitarbeiter/auftragserfassung/):** Aufträge aus E-Mail, PDF und Excel ohne Abtippen ins TMS übertragen.
-- **[Rechnungsprüfung](/de/digitale-mitarbeiter/rechnungspruefung/):** Rechnungen von Frachtführern vor der Zahlung mit Aufträgen und Vertragspreisen abgeglichen.
+- **[Frachtanfragen und Angebote](/de/loesungen/disponent/):** Anfragen gelesen, Frachtführer angefragt, Angebote verglichen und innerhalb Ihrer Limits gebucht.
+- **[Auftragserfassung](/de/loesungen/auftragserfassung/):** Aufträge aus E-Mail, PDF und Excel ohne Abtippen ins TMS übertragen.
+- **[Rechnungsprüfung](/de/loesungen/rechnungspruefung/):** Rechnungen von Frachtführern vor der Zahlung mit Aufträgen und Vertragspreisen abgeglichen.
 
 ## Was sich für Ihr Unternehmen ändert
 

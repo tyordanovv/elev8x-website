@@ -13,7 +13,7 @@ eyebrow: "Industry"
 h1: "AI automation for freight forwarders"
 lead: "Freight enquiries, carrier quotes, order entry and invoice checks: the routine of a forwarding team runs on decisions that can be automated. With one forwarder, the time per enquiry fell from 2 hours to 17 minutes."
 results:
-  - { value: "2 h → 17 min", label: "per freight enquiry" }
+  - { value: "17 min", label: "per freight enquiry, down from 2 hours" }
 steps:
   title: "Where forwarders lose the most hours"
   items:
@@ -35,9 +35,9 @@ faq:
 
 ## What we automate for forwarding teams
 
-- **[Freight enquiries and carrier quotes](/digital-roles/freight-dispatcher/):** requests read, carriers asked, quotes compared and booked within your limits.
-- **[Order intake](/digital-roles/order-intake/):** orders from email, PDF and Excel posted into your TMS without retyping.
-- **[Invoice checks](/digital-roles/invoice-checker/):** carrier invoices matched to orders and agreed rates before payment.
+- **[Freight enquiries and carrier quotes](/solutions/freight-dispatcher/):** requests read, carriers asked, quotes compared and booked within your limits.
+- **[Order intake](/solutions/order-intake/):** orders from email, PDF and Excel posted into your TMS without retyping.
+- **[Invoice checks](/solutions/invoice-checker/):** carrier invoices matched to orders and agreed rates before payment.
 
 ## What changes for the business
 

@@ -12,7 +12,7 @@ eyebrow: "Branchen"
 h1: "Automatisierung für Branchen, die von Routineentscheidungen leben"
 lead: "Wir arbeiten dort, wo Entscheidungen häufig sind, die Regeln klar und der Papierkram groß. Dort rechnet sich Automatisierung am schnellsten, und dort haben wir gemessene Ergebnisse."
 children: ["freight-forwarding", "transport-companies", "fuel-stations"]
-related: ["digital-roles", "case-studies"]
+related: ["solutions", "case-studies"]
 ---
 
 ## Warum diese Branchen
@@ -21,4 +21,4 @@ Speditionen, Transportunternehmen und Tankstellenbetreiber treffen dieselben Ent
 
 ## Ihre Branche ist nicht dabei?
 
-Versandabteilungen der Industrie und Softwarefirmen nutzen dieselben Bausteine. Unser eigenes Produkt [Autolensio](/de/referenzen/autolensio/) betreibt eine Pipeline vom Kundengespräch bis zum ausgerollten Fix. Wenn Ihr Team dieselbe Entscheidung viele Male pro Woche trifft, zeigt der Automatisierungs-Check, ob sich die Automatisierung lohnt.
+Versandabteilungen der Industrie und Softwarefirmen nutzen dieselben Bausteine. Unser eigenes Produkt [Autolensio](/de/referenzen/autolensio/) betreibt eine Pipeline vom Kundengespräch bis zum ausgerollten Fix. Wenn Ihr Team dieselbe Entscheidung viele Male pro Woche trifft, zeigt die kostenlose Analyse, ob sich die Automatisierung lohnt.

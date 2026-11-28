@@ -2,15 +2,15 @@
 lang: de
 key: order-intake
 type: role
-path: /de/digitale-mitarbeiter/auftragserfassung/
-parent: digital-roles
+path: /de/loesungen/auftragserfassung/
+parent: solutions
 order: 2
 title: "Auftragserfassung automatisieren: E-Mail, PDF und Excel | Elev8x"
 description: "Die digitale Auftragserfassung liest Aufträge in jedem Layout, prüft sie gegen Ihre Regeln und überträgt saubere Datensätze in Ihr TMS oder ERP, ohne Abtippen."
 nav: "Digitale Auftragserfassung"
 summary: "Macht aus Aufträgen in jedem Format saubere Datensätze in Ihrem TMS oder ERP."
-badge: "Beispielrolle"
-eyebrow: "Digitaler Mitarbeiter"
+badge: "Beispiellösung"
+eyebrow: "Lösung"
 h1: "Digitale Auftragserfassung: Aufträge aus E-Mail, PDF und Excel"
 lead: "Macht aus eingehenden Aufträgen in jedem Format saubere Datensätze in Ihrem TMS oder ERP und schickt unklare Aufträge mit den fehlenden Angaben an den Absender zurück."
 steps:
@@ -43,4 +43,4 @@ faq:
 
 ## Wo sie hineinpasst
 
-Die Auftragserfassung ist oft die erste Rolle, die wir automatisieren, weil sie alles Weitere speist: Disposition, Abrechnung und Kundeninformation. Sie passt gut zum [digitalen Disponenten](/de/digitale-mitarbeiter/disponent/) und zum [digitalen Rechnungsprüfer](/de/digitale-mitarbeiter/rechnungspruefung/).
+Die Auftragserfassung ist oft die erste Rolle, die wir automatisieren, weil sie alles Weitere speist: Disposition, Abrechnung und Kundeninformation. Sie passt gut zum [digitalen Disponenten](/de/loesungen/disponent/) und zum [digitalen Rechnungsprüfer](/de/loesungen/rechnungspruefung/).

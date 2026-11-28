@@ -13,7 +13,7 @@ eyebrow: "Service"
 h1: "Decision automation: process automation with rules and AI"
 lead: "Which carrier gets the load, whether an order is complete, whether an invoice is right: we turn these everyday decisions into software. Clear logic runs as code, AI reads the messy input, and your team only sees the exceptions."
 results:
-  - { value: "2 h → 17 min", label: "per freight enquiry" }
+  - { value: "17 min", label: "per freight enquiry, down from 2 hours" }
   - { value: "6 h a week", label: "back for a fuel-station group" }
 steps:
   title: "How a decision gets made"
@@ -24,14 +24,14 @@ steps:
     - "The decision executes inside your guardrails: it books, posts, approves or replies."
     - "Anything outside the rules goes to the right person, with the full context attached."
 caseKey: "freight-enquiries"
-related: ["ai-orchestrator", "digital-roles", "freight-dispatcher", "how-we-work"]
+related: ["digital-worker", "solutions", "freight-dispatcher", "how-we-work"]
 faq:
   - q: "How is decision automation different from RPA?"
     a: "RPA imitates clicks. We automate the decision itself: rules in code, AI for reading and weighing, and screen automation only where a system has no interface."
   - q: "What if a decision needs judgment?"
     a: "AI weighs it inside limits you set. Anything outside those limits goes to a person with the context attached, so nothing is guessed."
   - q: "How long does a first automation take?"
-    a: "The automation check takes one to two weeks. The pilot goes live three to five weeks after that."
+    a: "The free analysis takes one to two weeks. The pilot goes live three to five weeks after that."
   - q: "Do we have to change our software?"
     a: "No. We connect to your TMS, ERP, mailbox and portals. Where a system has no interface, we work through its screens."
 ---

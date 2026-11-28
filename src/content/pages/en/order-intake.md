@@ -2,15 +2,15 @@
 lang: en
 key: order-intake
 type: role
-path: /digital-roles/order-intake/
-parent: digital-roles
+path: /solutions/order-intake/
+parent: solutions
 order: 2
 title: "Order entry automation from email, PDF and Excel | Elev8x"
 description: "A digital order intake clerk reads orders in any layout, checks them against your rules and posts clean records into your TMS or ERP, with no retyping."
 nav: "Order intake clerk"
 summary: "Turns orders in any format into clean records in your TMS or ERP."
-badge: "Example role"
-eyebrow: "Digital role"
+badge: "Example solution"
+eyebrow: "Solution"
 h1: "Digital order intake clerk: order entry from email, PDF and Excel"
 lead: "Turns incoming orders in any format into clean records in your TMS or ERP, and sends unclear orders back with the missing fields named."
 steps:
@@ -43,4 +43,4 @@ faq:
 
 ## Where it fits
 
-Order intake is often the first role we automate, because it feeds everything after it: dispatching, invoicing and customer updates. It pairs well with the [digital freight dispatcher](/digital-roles/freight-dispatcher/) and the [digital invoice checker](/digital-roles/invoice-checker/).
+Order intake is often the first role we automate, because it feeds everything after it: dispatching, invoicing and customer updates. It pairs well with the [digital freight dispatcher](/solutions/freight-dispatcher/) and the [digital invoice checker](/solutions/invoice-checker/).

@@ -19,10 +19,10 @@ steps:
     - "Rechnungen von Lieferanten und Subunternehmern gegen vereinbarte Preise prüfen"
     - "CMR und Abliefernachweisen hinterherlaufen"
     - "Kunden beantworten, die wissen wollen, wo ihre Ladung ist"
-related: ["order-intake", "invoice-checker", "freight-dispatcher", "ai-orchestrator"]
+related: ["order-intake", "invoice-checker", "freight-dispatcher", "digital-worker"]
 faq:
   - q: "Wir sind ein kleines Transportunternehmen. Lohnt sich das für uns?"
-    a: "Genau das beantwortet der Automatisierungs-Check. Wenn eine Automatisierung nicht mehr spart, als sie kostet, sagen wir es Ihnen, bevor Sie etwas bezahlen."
+    a: "Genau das beantwortet die kostenlose Analyse. Wenn eine Automatisierung nicht mehr spart, als sie kostet, sagen wir es Ihnen, bevor Sie etwas bezahlen."
   - q: "Funktioniert das mit unserem TMS?"
     a: "Ja. Wir verbinden uns über die Schnittstelle, und wo es keine gibt, über die Bildschirmoberfläche."
   - q: "Können Kunden automatisch Statusmeldungen bekommen?"
@@ -31,14 +31,14 @@ faq:
 
 ## Was wir für Transportunternehmen automatisieren
 
-- **[Auftragserfassung](/de/digitale-mitarbeiter/auftragserfassung/):** Aufträge in jedem Format ins TMS übertragen, unklare Aufträge mit den fehlenden Angaben zurück an den Absender.
-- **[Rechnungsprüfung](/de/digitale-mitarbeiter/rechnungspruefung/):** jede Rechnung vor der Zahlung mit Aufträgen, Preisen und Abliefernachweisen abgeglichen.
+- **[Auftragserfassung](/de/loesungen/auftragserfassung/):** Aufträge in jedem Format ins TMS übertragen, unklare Aufträge mit den fehlenden Angaben zurück an den Absender.
+- **[Rechnungsprüfung](/de/loesungen/rechnungspruefung/):** jede Rechnung vor der Zahlung mit Aufträgen, Preisen und Abliefernachweisen abgeglichen.
 - **Statusmeldungen an Kunden:** Kunden zu festgelegten Zeitpunkten informiert, ohne dass jemand E-Mails tippt.
-- **[Frachtanfragen](/de/digitale-mitarbeiter/disponent/):** für Transportunternehmen, die auch Ladungen vermitteln, Anfragen und Angebote innerhalb Ihrer Limits.
+- **[Frachtanfragen](/de/loesungen/disponent/):** für Transportunternehmen, die auch Ladungen vermitteln, Anfragen und Angebote innerhalb Ihrer Limits.
 
 ## Was sich für Ihr Unternehmen ändert
 
 - **Die Büroarbeit wächst mit Ihrer Flotte, ohne Neueinstellungen** für Routineaufgaben.
 - **Weniger Fehler in Aufträgen und Rechnungen**, weil jeder Datensatz geprüft wird, bevor er angelegt oder bezahlt wird.
 - **Weniger „Wo ist meine Ladung?“-Anrufe**, weil Kunden informiert sind, bevor sie fragen.
-- **Ein Morgenbericht** vom Orchestrator, statt jede Warteschlange von Hand zu prüfen.
+- **Ein Morgenbericht** vom digitalen Mitarbeiter, statt jede Warteschlange von Hand zu prüfen.

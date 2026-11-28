@@ -12,11 +12,11 @@ eyebrow: "Referenzen"
 h1: "Referenzen: Ergebnisse, gemessen in Stunden"
 lead: "Jedes Projekt beginnt mit einer Ausgangsmessung. So wird das Ergebnis gemessen, nicht geschätzt. Diese Projekte können wir heute zeigen."
 children: ["freight-enquiries", "fuel-station-back-office", "autolensio"]
-related: ["digital-roles", "how-we-work"]
+related: ["solutions", "how-we-work"]
 ---
 
 ## Wie wir messen
 
-Bevor wir bauen, halten wir fest, wie lange der Prozess heute dauert, wie oft er läuft und wo Fehler entstehen. Nach dem Go-live protokolliert der Orchestrator jeden Lauf, sodass sich dieselben Zahlen vergleichen lassen. So wurden „2 Stunden auf 17 Minuten“ und „6 Stunden pro Woche“ gemessen.
+Bevor wir bauen, halten wir fest, wie lange der Prozess heute dauert, wie oft er läuft und wo Fehler entstehen. Nach dem Go-live protokolliert der digitale Mitarbeiter jeden Lauf, sodass sich dieselben Zahlen vergleichen lassen. So wurden „2 Stunden auf 17 Minuten“ und „6 Stunden pro Woche“ gemessen.
 
 > Wenn eine Automatisierung nicht mehr spart, als sie kostet, sagen wir es Ihnen, bevor Sie etwas bezahlen.

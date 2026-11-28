@@ -5,11 +5,11 @@ type: page
 path: /de/kontakt/
 parent: home
 order: 6
-title: "Kostenlosen Automatisierungs-Check buchen | Elev8x"
+title: "Kostenlose Analyse anfragen | Elev8x"
 description: "Sagen Sie uns, welche Entscheidung Ihr Team die meisten Stunden kostet. In 30 Minuten erfassen wir sie, und Sie erhalten einen Festpreis für die Automatisierung."
 nav: "Kontakt"
 eyebrow: "Kontakt"
-h1: "Kostenlosen Automatisierungs-Check buchen"
+h1: "Kostenlose Analyse anfragen"
 lead: "Sagen Sie uns, welche Entscheidung Ihr Team die meisten Stunden kostet. In einem 30-minütigen Gespräch erfassen wir sie, und Sie erhalten einen Festpreis für die Automatisierung. Keine Folien, keine Verpflichtung."
 ---
 

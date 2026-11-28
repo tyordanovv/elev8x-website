@@ -18,7 +18,7 @@ related: ["how-we-work", "case-studies", "contact"]
 
 We start with the decision, not the model. Most AI projects begin with a tool and go looking for a problem. We begin with a decision your team makes every day: who makes it, how often, with which information, and what a wrong call costs.
 
-Where the logic is clear, we write it as code: cheaper to run, the same answer every time, auditable line by line. We bring in AI only where people today read messy emails and documents or weigh options, and we put firm limits around it. Above everything sits one orchestrator that tells your manager, in plain language, what was decided and what needs a person.
+Where the logic is clear, we write it as code: cheaper to run, the same answer every time, auditable line by line. We bring in AI only where people today read messy emails and documents or weigh options, and we put firm limits around it. Above everything sits one digital worker that tells your manager, in plain language, what was decided and what needs a person.
 
 ## We run it ourselves
 

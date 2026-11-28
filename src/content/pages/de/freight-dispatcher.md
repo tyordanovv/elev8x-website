@@ -2,19 +2,19 @@
 lang: de
 key: freight-dispatcher
 type: role
-path: /de/digitale-mitarbeiter/disponent/
-parent: digital-roles
+path: /de/loesungen/disponent/
+parent: solutions
 order: 1
 title: "Frachtanfragen automatisieren: der digitale Disponent | Elev8x"
-description: "Ein digitaler Disponent liest Anfragen, fragt Frachtführer an, vergleicht Angebote und bucht in Ihren Limits. Mit einer Spedition gebaut: 2 h → 17 min pro Anfrage."
+description: "Ein digitaler Disponent liest Anfragen, fragt Frachtführer an, vergleicht Angebote und bucht in Ihren Limits. Mit einer Spedition gebaut: von 2 h auf 17 min pro Anfrage."
 nav: "Digitaler Disponent"
 summary: "Liest Frachtanfragen, fragt Frachtführer an, vergleicht Angebote und bucht in Ihren Limits."
-badge: "Mit einer Spedition gebaut · 2 h → 17 min pro Anfrage"
-eyebrow: "Digitaler Mitarbeiter"
+badge: "Mit einer Spedition gebaut · von 2 h auf 17 min pro Anfrage"
+eyebrow: "Lösung"
 h1: "Digitaler Disponent: Frachtanfragen und Angebote automatisieren"
 lead: "Übernimmt den täglichen Zyklus aus Frachtanfragen, Anfragen an Frachtführer und Buchungen für ein Speditionsteam, auf Deutsch, Englisch und Bulgarisch. Mit einer Spedition gebaut, hat er die Zeit pro Anfrage von 2 Stunden auf 17 Minuten gesenkt."
 results:
-  - { value: "2 h → 17 min", label: "pro Anfrage" }
+  - { value: "17 min", label: "pro Anfrage statt 2 Stunden" }
   - { value: "86 %", label: "weniger Zeit pro Anfrage" }
 steps:
   title: "Was der digitale Disponent macht"
@@ -49,4 +49,4 @@ faq:
 
 ## Woher die Anfragen kommen
 
-E-Mails, PDF-Anhänge, Kundenportale und Frachtenbörsen. Der digitale Disponent liest sie in jedem Layout und jeder Sprache, wendet Ihre Regeln für Frachtführer an und dokumentiert jede Anfrage, jedes Angebot und jede Entscheidung für den Tagesbericht des Orchestrators.
+E-Mails, PDF-Anhänge, Kundenportale und Frachtenbörsen. Der digitale Disponent liest sie in jedem Layout und jeder Sprache, wendet Ihre Regeln für Frachtführer an und dokumentiert jede Anfrage, jedes Angebot und jede Entscheidung für den Tagesbericht des digitalen Mitarbeiters.

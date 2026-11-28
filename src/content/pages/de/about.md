@@ -18,7 +18,7 @@ related: ["how-we-work", "case-studies", "contact"]
 
 Wir beginnen mit der Entscheidung, nicht mit dem Modell. Die meisten KI-Projekte beginnen mit einem Werkzeug und suchen dann ein Problem. Wir beginnen mit einer Entscheidung, die Ihr Team jeden Tag trifft: wer sie trifft, wie oft, mit welchen Informationen und was eine Fehlentscheidung kostet.
 
-Wo die Logik klar ist, schreiben wir sie als Code: günstiger im Betrieb, jedes Mal dieselbe Antwort, Zeile für Zeile prüfbar. KI setzen wir nur dort ein, wo Menschen heute unstrukturierte E-Mails und Dokumente lesen oder Optionen abwägen, und wir setzen ihr klare Grenzen. Über allem steht ein Orchestrator, der Ihrer Führungskraft in klarer Sprache sagt, was entschieden wurde und was einen Menschen braucht.
+Wo die Logik klar ist, schreiben wir sie als Code: günstiger im Betrieb, jedes Mal dieselbe Antwort, Zeile für Zeile prüfbar. KI setzen wir nur dort ein, wo Menschen heute unstrukturierte E-Mails und Dokumente lesen oder Optionen abwägen, und wir setzen ihr klare Grenzen. Über allem steht ein digitaler Mitarbeiter, der Ihrer Führungskraft in klarer Sprache sagt, was entschieden wurde und was einen Menschen braucht.
 
 ## Wir nutzen es selbst
 

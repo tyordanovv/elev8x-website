@@ -6,9 +6,9 @@ path: /industries/fuel-stations/
 parent: industries
 order: 3
 title: "Back-office automation for fuel-station groups | Elev8x"
-description: "Daily reports, fuel deliveries, cash and stock checks, automated for multi-site fuel-station operators. Live with one group: 6 hours a week saved across 2 sites."
+description: "Daily reports, fuel deliveries, cash collections and stock checks, automated for multi-site fuel-station operators. Live with one group: 6 hours a week saved."
 nav: "Fuel-station groups"
-summary: "Daily reports, delivery reconciliation and cash and stock checks for multi-site operators."
+summary: "Daily reports, fuel deliveries, cash collections and stock checks for multi-site operators."
 eyebrow: "Industry"
 h1: "Back-office automation for fuel-station groups"
 lead: "Daily reports, fuel deliveries, cash and stock: a multi-site operator’s paperwork follows the same rules every day. Live with a fuel-station group, our digital back office saves 6 hours a week across 2 sites."
@@ -19,11 +19,12 @@ steps:
   title: "Where fuel-station groups lose the most hours"
   items:
     - "Collecting and consolidating daily reports from every site"
-    - "Reconciling fuel deliveries against orders, often from paper notes"
+    - "Booking fuel deliveries into the system and reconciling them, often from paper notes"
+    - "Recording the cash collections from every site"
     - "Finding cash and stock differences, often weeks later"
     - "Building one picture of the business for the owner"
 caseKey: "fuel-station-back-office"
-related: ["station-back-office", "fuel-station-back-office", "ai-orchestrator", "decision-automation"]
+related: ["station-back-office", "fuel-station-back-office", "digital-worker", "decision-automation"]
 faq:
   - q: "Our delivery notes are on paper. Does that work?"
     a: "Yes. AI reads paper and PDF delivery notes; the reconciliation runs as code."
@@ -35,7 +36,7 @@ faq:
 
 ## What we automate for fuel-station groups
 
-The [digital station back office](/digital-roles/station-back-office/) consolidates the daily reports from every station, reconciles fuel deliveries against orders, flags cash and stock differences the same day and sends the owner one summary every morning.
+The [digital station back office](/solutions/station-back-office/) consolidates the daily reports from every station, books fuel deliveries and reconciles them against orders, records the cash collections, flags cash and stock differences the same day and sends the owner one summary every morning.
 
 ## What changes for the business
 

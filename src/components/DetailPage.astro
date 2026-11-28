@@ -34,6 +34,14 @@ const isPlain = d.type === 'page' || isLegal;
 const hasAside = Boolean(d.owners || d.facts || (!isPlain && d.type !== 'hub'));
 const missing = d.key === 'imprint' ? missingLegalFields() : [];
 const mailSubject = encodeURIComponent(s.bookCheck);
+
+// Illustration shown with each case study's diagram (files in public/assets/illustrations/).
+const caseImages: Record<string, string> = {
+  'freight-enquiries': '/assets/illustrations/case-freight.svg',
+  'fuel-station-back-office': '/assets/illustrations/case-fuel.svg',
+  autolensio: '/assets/illustrations/case-autolensio.svg',
+};
+const illustration = caseImages[d.key] ?? '/assets/illustrations/hero.svg';
 ---
 
 <section class="hero hero--page">
@@ -57,7 +65,7 @@ const mailSubject = encodeURIComponent(s.bookCheck);
       )}
       {!isPlain && (
         <div class="btn-row" style="margin-top:32px">
-          <a class="btn btn--primary btn--lg" href={contactPath}>{s.bookCheck}<Icon name="arrow" /></a>
+          <a class="btn btn--primary btn--lg" href={contactPath}>{s.bookCheck}</a>
           {caseRef && <a class="btn btn--secondary btn--lg" href={caseRef.data.path}>{s.readCase}</a>}
         </div>
       )}
@@ -78,8 +86,8 @@ const mailSubject = encodeURIComponent(s.bookCheck);
 {(d.flow || d.pipeline) && (
   <section class="section section--compact section--alt">
     <div class="container">
-      {d.flow && <FlowDiagram lang={lang} flow={d.flow} />}
-      {d.pipeline && <Pipeline lang={lang} pipeline={d.pipeline} />}
+      {d.flow && <FlowDiagram lang={lang} image={illustration} flow={d.flow} />}
+      {d.pipeline && <Pipeline lang={lang} image={illustration} pipeline={d.pipeline} />}
     </div>
   </section>
 )}
@@ -167,13 +175,13 @@ const mailSubject = encodeURIComponent(s.bookCheck);
           <div class="panel">
             <h2 class="panel__title">E-mail</h2>
             <p style="margin:14px 0 18px;font-size:18px;font-weight:600"><a href={`mailto:${site.email}?subject=${mailSubject}`}>{site.email}</a></p>
-            <a class="btn btn--primary" href={`mailto:${site.email}?subject=${mailSubject}`}>{s.bookCheck}<Icon name="arrow" /></a>
+            <a class="btn btn--primary" href={`mailto:${site.email}?subject=${mailSubject}`}>{s.bookCheck}</a>
           </div>
           {site.bookingUrl && (
             <div class="panel">
               <h2 class="panel__title">{s.bookCall}</h2>
               <p style="margin:14px 0 18px">30 min</p>
-              <a class="btn btn--accent" href={site.bookingUrl} rel="noopener">{s.bookCall}<Icon name="arrow" /></a>
+              <a class="btn btn--accent" href={site.bookingUrl} rel="noopener">{s.bookCall}</a>
             </div>
           )}
         </div>
@@ -204,7 +212,7 @@ const mailSubject = encodeURIComponent(s.bookCheck);
           <div class="panel">
             <p style="margin:0;font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.25">{s.ctaTitle}</p>
             <p style="margin:10px 0 18px;font-size:15px;line-height:1.55;color:var(--text)">{s.ctaText}</p>
-            <a class="btn btn--primary" href={contactPath}>{s.bookCall}<Icon name="arrow" /></a>
+            <a class="btn btn--primary" href={contactPath}>{s.bookCall}</a>
           </div>
         )}
       </aside>

@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "check:site": "node scripts/check-site.mjs",
     "og": "node scripts/make-og.mjs",
-    "ci": "npm run build && npm run check:site"
+    "ci": "npm run build && npm run check:site",
+    "illustrations": "node scripts/make-illustrations.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.6",

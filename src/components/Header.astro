@@ -22,7 +22,7 @@ async function links(keys: string[]) {
 }
 
 const services = await pageByKey('services', lang);
-const roles = await pageByKey('digital-roles', lang);
+const roles = await pageByKey('solutions', lang);
 const industries = await pageByKey('industries', lang);
 const cases = await pageByKey('case-studies', lang);
 const about = await pageByKey('about', lang);
@@ -30,7 +30,7 @@ const how = await pageByKey('how-we-work', lang);
 const contact = await pageByKey('contact', lang);
 
 const groups = [
-  { label: s.navServices, hub: services, items: await links(['decision-automation', 'ai-orchestrator', 'digital-roles']) },
+  { label: s.navServices, hub: services, items: await links(['decision-automation', 'digital-worker', 'solutions']) },
   {
     label: s.navRoles,
     hub: roles,

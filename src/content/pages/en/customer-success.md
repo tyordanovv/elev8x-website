@@ -2,15 +2,15 @@
 lang: en
 key: customer-success
 type: role
-path: /digital-roles/customer-success/
-parent: digital-roles
+path: /solutions/customer-success/
+parent: solutions
 order: 5
 title: "Customer success automation: onboarding and calls to tasks | Elev8x"
 description: "A digital customer success assistant greets every sign-up, sends follow-ups based on each user’s searches and turns customer calls into ready-to-approve tasks."
 nav: "Customer success assistant"
 summary: "Greets every sign-up, personalises follow-ups and turns customer calls into tasks."
 badge: "Running on Autolensio"
-eyebrow: "Digital role"
+eyebrow: "Solution"
 h1: "Digital customer success assistant: from sign-up to shipped feedback"
 lead: "Greets every new user, follows up based on what they actually search, and suggests next steps by email and in the app. After each customer call, it turns the conversation into tasks and defect reports that your customer manager only has to approve."
 steps:
@@ -20,13 +20,13 @@ steps:
     - "Sends follow-up emails based on what each user searches"
     - "Suggests relevant searches by email and in the app, based on each user’s preferences"
     - "Analyses customer manager calls and drafts tasks and defect reports"
-    - "Passes tasks to the orchestrator once the customer manager accepts or adjusts them"
+    - "Passes tasks to the digital worker once the customer manager accepts or adjusts them"
 owners:
   code: "Sign-up and activity triggers, email timing, creating tasks in your tracker"
   ai: "Personalised follow-ups and suggestions, turning call conversations into tasks and defects"
   team: "The customer manager approves or adjusts every task and owns the relationship"
 caseKey: "autolensio"
-related: ["autolensio", "ai-orchestrator", "decision-automation", "digital-roles"]
+related: ["autolensio", "digital-worker", "decision-automation", "solutions"]
 faq:
   - q: "Does the AI create tasks on its own?"
     a: "It drafts them. Your customer manager accepts or adjusts each one before it becomes a task."
@@ -42,7 +42,7 @@ faq:
 - **Follow-ups people actually read**, because they are based on each user’s own searches and preferences.
 - **Feedback stops getting lost in notes.** Each call becomes tasks and defect reports right after it ends.
 - **Your customer manager spends time with customers**, not writing tickets.
-- **Approved work reaches delivery straight away**, through the [AI orchestrator](/services/ai-orchestrator/) and its developer and QA agents.
+- **Approved work reaches delivery straight away**, through the [digital worker](/services/digital-worker/) and its developer and QA agents.
 
 ## Where it runs today
 

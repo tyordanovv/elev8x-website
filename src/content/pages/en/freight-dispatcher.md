@@ -2,19 +2,19 @@
 lang: en
 key: freight-dispatcher
 type: role
-path: /digital-roles/freight-dispatcher/
-parent: digital-roles
+path: /solutions/freight-dispatcher/
+parent: solutions
 order: 1
 title: "Automate freight enquiries and carrier quotes | Elev8x"
-description: "A digital freight dispatcher reads requests, asks carriers, compares quotes and books within your limits. Built with a forwarder: 2 h → 17 min per enquiry."
+description: "A digital freight dispatcher reads requests, asks carriers, compares quotes and books within your limits. Built with a forwarder: from 2 h to 17 min per enquiry."
 nav: "Freight dispatcher"
 summary: "Reads freight requests, asks carriers, compares quotes and books within your limits."
-badge: "Built with a freight forwarder · 2 h → 17 min per enquiry"
-eyebrow: "Digital role"
+badge: "Built with a freight forwarder · from 2 h to 17 min per enquiry"
+eyebrow: "Solution"
 h1: "Digital freight dispatcher: automate freight enquiries and carrier quotes"
 lead: "Runs the daily cycle of freight requests, carrier enquiries and bookings for a forwarding team, in English, German and Bulgarian. Built with a freight forwarder, it cut the time per enquiry from 2 hours to 17 minutes."
 results:
-  - { value: "2 h → 17 min", label: "per enquiry" }
+  - { value: "17 min", label: "per enquiry, down from 2 hours" }
   - { value: "86%", label: "less time per enquiry" }
 steps:
   title: "What the digital dispatcher does"
@@ -49,4 +49,4 @@ faq:
 
 ## Where the requests come from
 
-Email, PDF attachments, customer portals and freight exchanges. The digital dispatcher reads them in any layout and language, applies your carrier rules, and keeps a record of every enquiry, quote and decision for the orchestrator’s daily briefing.
+Email, PDF attachments, customer portals and freight exchanges. The digital dispatcher reads them in any layout and language, applies your carrier rules, and keeps a record of every enquiry, quote and decision for the digital worker’s daily report.

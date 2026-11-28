@@ -2,15 +2,15 @@
 lang: en
 key: invoice-checker
 type: role
-path: /digital-roles/invoice-checker/
-parent: digital-roles
+path: /solutions/invoice-checker/
+parent: solutions
 order: 3
 title: "Freight invoice audit automation: digital invoice checker | Elev8x"
 description: "A digital invoice checker matches every carrier and supplier invoice to orders, proofs of delivery and agreed rates before it gets paid. No new TMS needed."
 nav: "Invoice checker"
 summary: "Checks every carrier and supplier invoice against orders and agreed rates before payment."
-badge: "Example role"
-eyebrow: "Digital role"
+badge: "Example solution"
+eyebrow: "Solution"
 h1: "Digital invoice checker: automated freight invoice audit"
 lead: "Checks every carrier and supplier invoice against orders, proofs of delivery and agreed rates before it gets paid, on top of the systems you already run."
 steps:

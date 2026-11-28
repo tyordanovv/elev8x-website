@@ -7,7 +7,7 @@ import PageCard from '../components/PageCard.astro';
 // GitHub Pages serves this file for every unknown URL, in English.
 const lang = 'en' as const;
 const s = t(lang);
-const picks = await pagesByKeys(['services', 'digital-roles', 'case-studies', 'contact'], lang);
+const picks = await pagesByKeys(['services', 'solutions', 'case-studies', 'contact'], lang);
 const alts = [
   { lang: 'en' as const, path: '/' },
   { lang: 'de' as const, path: '/de/' },

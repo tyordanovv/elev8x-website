@@ -12,7 +12,7 @@ eyebrow: "Industries"
 h1: "Automation for industries that run on routine decisions"
 lead: "We work where decisions are frequent, rules are clear and paperwork is heavy. That is where automation pays back fastest, and where we have measured results."
 children: ["freight-forwarding", "transport-companies", "fuel-stations"]
-related: ["digital-roles", "case-studies"]
+related: ["solutions", "case-studies"]
 ---
 
 ## Why these industries
@@ -21,4 +21,4 @@ Freight forwarders, carriers and fuel-station groups make the same decisions hun
 
 ## Not in this list?
 
-Industrial shipping teams and software companies use the same building blocks. Our own product, [Autolensio](/case-studies/autolensio/), runs a pipeline from customer calls to deployed fixes. If your team makes the same decision many times a week, the automation check will show whether it pays to automate it.
+Industrial shipping teams and software companies use the same building blocks. Our own product, [Autolensio](/case-studies/autolensio/), runs a pipeline from customer calls to deployed fixes. If your team makes the same decision many times a week, the free analysis will show whether it pays to automate it.

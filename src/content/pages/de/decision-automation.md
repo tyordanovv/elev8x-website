@@ -13,7 +13,7 @@ eyebrow: "Leistung"
 h1: "Entscheidungsautomatisierung: Prozessautomatisierung mit Regeln und KI"
 lead: "Welcher Frachtführer bekommt die Ladung, ist der Auftrag vollständig, stimmt die Rechnung: Aus diesen täglichen Entscheidungen machen wir Software. Klare Logik läuft als Code, KI liest die unstrukturierten Daten, und Ihr Team sieht nur noch die Ausnahmen."
 results:
-  - { value: "2 h → 17 min", label: "pro Frachtanfrage" }
+  - { value: "17 min", label: "pro Frachtanfrage statt 2 Stunden" }
   - { value: "6 h pro Woche", label: "zurück für einen Tankstellenbetreiber" }
 steps:
   title: "So wird eine Entscheidung getroffen"
@@ -24,14 +24,14 @@ steps:
     - "Die Entscheidung wird innerhalb Ihrer Leitplanken ausgeführt: Das System bucht, erfasst, gibt frei oder antwortet."
     - "Alles außerhalb der Regeln geht an die richtige Person, mit dem vollen Kontext."
 caseKey: "freight-enquiries"
-related: ["ai-orchestrator", "digital-roles", "freight-dispatcher", "how-we-work"]
+related: ["digital-worker", "solutions", "freight-dispatcher", "how-we-work"]
 faq:
   - q: "Was ist der Unterschied zu RPA?"
     a: "RPA ahmt Klicks nach. Wir automatisieren die Entscheidung selbst: Regeln als Code, KI zum Lesen und Abwägen und Bildschirmautomatisierung nur dort, wo ein System keine Schnittstelle hat."
   - q: "Was, wenn eine Entscheidung Urteilsvermögen braucht?"
     a: "Die KI wägt innerhalb der Grenzen ab, die Sie festlegen. Alles außerhalb davon geht mit dem Kontext an einen Menschen, damit nichts geraten wird."
   - q: "Wie lange dauert die erste Automatisierung?"
-    a: "Der Automatisierungs-Check dauert ein bis zwei Wochen. Der Pilot geht drei bis fünf Wochen danach live."
+    a: "Die kostenlose Analyse dauert ein bis zwei Wochen. Der Pilot geht drei bis fünf Wochen danach live."
   - q: "Müssen wir unsere Software wechseln?"
     a: "Nein. Wir verbinden uns mit Ihrem TMS, ERP, Postfach und Ihren Portalen. Wo ein System keine Schnittstelle hat, arbeiten wir über die Bildschirmoberfläche."
 ---

@@ -7,20 +7,20 @@ parent: case-studies
 order: 1
 title: "Referenz: Frachtanfragen von 2 Stunden auf 17 Minuten | Elev8x"
 description: "Wie eine Spedition die Zeit pro Frachtanfrage von 2 Stunden auf 17 Minuten gesenkt hat, mit einem digitalen Disponenten auf der TIMOCOM-API und dem Postfach des Teams."
-nav: "Spedition: 2 h → 17 min pro Anfrage"
+nav: "Spedition: von 2 h auf 17 min pro Anfrage"
 summary: "Ein digitaler Disponent auf der TIMOCOM-API fragt Frachtführer an, sammelt und vergleicht Angebote und schlägt das beste vor."
 status: progress
 eyebrow: "Referenz · Spedition"
 h1: "Frachtanfragen: von 2 Stunden auf 17 Minuten"
 lead: "Das Team einer Spedition brauchte für jede Anfrage 2 Stunden: Anfrage lesen, Frachtführer finden, Angebote einholen und vergleichen. Heute erledigt ein digitaler Disponent den Routineteil, und jede Anfrage braucht 17 Minuten Aufmerksamkeit eines Menschen."
 results:
-  - { value: "2 h → 17 min", label: "pro Anfrage" }
+  - { value: "17 min", label: "pro Anfrage statt 2 Stunden" }
   - { value: "86 %", label: "weniger Zeit pro Anfrage" }
 facts:
   - { label: "Branche", value: "Spedition" }
   - { label: "Prozess", value: "Frachtanfragen und Angebote von Frachtführern" }
   - { label: "Systeme", value: "TIMOCOM-API, Postfach des Teams" }
-  - { label: "Digitaler Mitarbeiter", value: "Disponent" }
+  - { label: "Lösung", value: "Disponent" }
   - { label: "Status", value: "In Umsetzung" }
 flow:
   title: "Frachtanfragen: von 2 Stunden auf 17 Minuten"
@@ -36,7 +36,7 @@ flow:
   exception:
     title: "Ihr Team übernimmt die Ausnahmen"
     text: "Ladungen über Ihrem Limit, Neukunden und Reklamationen."
-related: ["freight-dispatcher", "freight-forwarding", "decision-automation", "ai-orchestrator"]
+related: ["freight-dispatcher", "freight-forwarding", "decision-automation", "digital-worker"]
 published: 2026-11-27
 updated: 2026-11-27
 ---
@@ -57,6 +57,6 @@ Einen digitalen Disponenten auf der TIMOCOM-API und dem Postfach des Teams:
 
 - **17 Minuten pro Anfrage statt 2 Stunden**, gemessen gegen die Ausgangsmessung vor dem Aufbau. Das sind 86 % weniger Zeit pro Anfrage.
 - **Freie Kapazität für mehr Ladungen** mit demselben Team.
-- **Eine vollständige Dokumentation** jeder Anfrage, jedes Angebots und jeder Entscheidung für den Tagesbericht des Orchestrators.
+- **Eine vollständige Dokumentation** jeder Anfrage, jedes Angebots und jeder Entscheidung für den Tagesbericht des digitalen Mitarbeiters.
 
 Das Projekt läuft noch. Wenn die nächsten Schritte live gehen, aktualisieren wir diese Seite mit den neuen Zahlen.

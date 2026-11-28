@@ -1,44 +1,42 @@
 ---
-// Multi-lane process diagram in HTML (used for the Autolensio case).
+// Case picture for a process with several stages (Autolensio): an illustration,
+// then each stage as a short list of steps tagged with who does them.
 import type { Lang } from '../config/site';
 import { t } from '../i18n/ui';
 
 type Owner = 'code' | 'ai' | 'team' | 'user';
 interface Props {
   lang: Lang;
+  image: string;
   pipeline: {
     title: string;
     caption: string;
     lanes: { label: string; steps: { name: string; owner: Owner; who?: string }[] }[];
   };
 }
-const { lang, pipeline } = Astro.props;
+const { lang, image, pipeline } = Astro.props;
 const s = t(lang);
 const ownerLabel = (o: Owner, who?: string) =>
   who ?? (o === 'code' ? s.ownerCode : o === 'ai' ? s.ownerAi : o === 'team' ? s.ownerTeam : s.ownerUser);
-const used = new Set(pipeline.lanes.flatMap((l) => l.steps.map((st) => st.owner)));
 ---
 
-<figure class="diagram">
-  <h2 class="diagram__title">{pipeline.title}</h2>
-  {pipeline.lanes.map((lane) => (
-    <div class="lane diagram__row">
-      <p class="lane__label">{lane.label}</p>
-      <ol class="diagram__steps">
-        {lane.steps.map((st) => (
-          <li class="diagram__step">
-            <span class="diagram__name">{st.name}</span>
-            <span class={`owner owner--${st.owner}`}>{ownerLabel(st.owner, st.who)}</span>
-          </li>
-        ))}
-      </ol>
-    </div>
-  ))}
-  <ul class="diagram__key" aria-label={s.diagramKey}>
-    {used.has('user') && <li class="owner owner--user">{s.ownerUser}</li>}
-    {used.has('code') && <li class="owner owner--code">{s.ownerCode}</li>}
-    {used.has('ai') && <li class="owner owner--ai">{s.ownerAi}</li>}
-    {used.has('team') && <li class="owner owner--team">{s.ownerTeam}</li>}
-  </ul>
-  <figcaption>{pipeline.caption}</figcaption>
+<figure class="case-visual">
+  <img class="case-visual__img" src={image} alt={pipeline.title} width="1200" height="500" loading="lazy" decoding="async" />
+  <div class="case-visual__body case-visual__body--lanes">
+    <h2 class="case-visual__title">{pipeline.title}</h2>
+    {pipeline.lanes.map((lane) => (
+      <div class="case-visual__lane">
+        <h3>{lane.label}</h3>
+        <ol class="case-visual__steps">
+          {lane.steps.map((st) => (
+            <li>
+              <span>{st.name}</span>
+              <span class={`owner owner--${st.owner}`}>{ownerLabel(st.owner, st.who)}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    ))}
+    <figcaption>{pipeline.caption}</figcaption>
+  </div>
 </figure>

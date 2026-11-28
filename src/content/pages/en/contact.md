@@ -5,11 +5,11 @@ type: page
 path: /contact/
 parent: home
 order: 6
-title: "Book a free automation check | Elev8x"
+title: "Book a free analysis | Elev8x"
 description: "Tell us which decision costs your team the most hours. In a 30-minute call we map it, and you get a fixed price to automate it. No slides, no obligation."
 nav: "Contact"
 eyebrow: "Contact"
-h1: "Book a free automation check"
+h1: "Book a free analysis"
 lead: "Tell us which decision costs your team the most hours. In a 30-minute call we map it, and you get a fixed price to automate it. No slides, no obligation."
 ---
 

@@ -18,23 +18,24 @@ const s = t(lang);
 
 const contact = await href('contact', lang);
 const casesHub = await href('case-studies', lang);
-const rolesHub = await href('digital-roles', lang);
-const orchestrator = await href('ai-orchestrator', lang);
+const solutionsHub = await href('solutions', lang);
+const workerPage = await href('digital-worker', lang);
 const how = await href('how-we-work', lang);
 const about = await href('about', lang);
-const roles = await pagesByKeys(['freight-dispatcher', 'order-intake', 'invoice-checker', 'station-back-office', 'customer-success'], lang);
+const solutions = await pagesByKeys(['freight-dispatcher', 'order-intake', 'invoice-checker', 'station-back-office', 'customer-success'], lang);
 const cases = await pagesByKeys(['freight-enquiries', 'fuel-station-back-office', 'autolensio'], lang);
 
+const pathOf = async (key?: string) => (key ? (await pageByKey(key, lang))?.data.path : undefined);
 const resultItems = await Promise.all(
-  h.results.items.map(async (r: { value: string; label: string; case: string }) => ({ ...r, path: (await pageByKey(r.case, lang))?.data.path })),
+  h.results.items.map(async (r: { value: string; label: string; case: string }) => ({ ...r, path: await pathOf(r.case) })),
 );
-const builtFor = await Promise.all(
-  h.builtFor.items.map(async (b: { label: string; key?: string }) => ({ ...b, path: b.key ? (await pageByKey(b.key, lang))?.data.path : undefined })),
+const builtFor = await Promise.all(h.builtFor.items.map(async (b: { label: string; key?: string }) => ({ ...b, path: await pathOf(b.key) })));
+const serviceCards = await Promise.all(
+  h.services.cards.map(async (c: { key: string; icon: 'decision' | 'orchestrator' | 'roles'; title: string; text: string }) => ({
+    ...c,
+    path: await pathOf(c.key),
+  })),
 );
-const buildCards = await Promise.all(
-  h.build.cards.map(async (c: { key: string }) => ({ ...c, path: (await pageByKey(c.key, lang))?.data.path })),
-);
-const bars = [44, 58, 52, 70, 64, 84, 96];
 ---
 
 <section class="hero" id="top">
@@ -44,51 +45,13 @@ const bars = [44, 58, 52, 70, 64, 84, 96];
       <h1 class="h1 h1--hero">{h.h1[0]}<span class="mark">{h.h1[1]}</span>{h.h1[2]}</h1>
       <p class="lead lead--lg">{h.lead}</p>
       <div class="btn-row">
-        <a class="btn btn--primary btn--lg" href={contact}>{s.bookCheck}<Icon name="arrow" /></a>
+        <a class="btn btn--primary btn--lg" href={contact}>{s.bookCheck}</a>
         <a class="btn btn--secondary btn--lg" href={casesHub}>{h.ctaSecondary}</a>
       </div>
-      <p class="mono-note">{h.tagline}</p>
+      <p class="hero__tagline">{h.tagline}</p>
     </div>
-
-    <div class="hero__visual">
-      <figure class="dash" aria-label={h.dash.aria}>
-        <div class="dash__head">
-          <div class="dash__brand">
-            <img src="/assets/elev8x-mark.svg" alt="" width="32" height="32" />
-            <div>
-              <div class="dash__title">{h.dash.title}</div>
-              <div class="dash__meta">{h.dash.meta}</div>
-            </div>
-          </div>
-          <span class="sample-tag">{s.sampleData}</span>
-        </div>
-        <p class="dash__headline">{h.dash.headline[0]}<br />{h.dash.headline[1]}</p>
-        <div class="dash__rows">
-          {h.dash.rows.map((r: { name: string; sub: string; state: string; stateLabel: string }) => (
-            <div class="dash__row">
-              <div>
-                <div class="dash__name">{r.name}</div>
-                <div class="dash__sub">{r.sub}</div>
-              </div>
-              <span class={`state state--${r.state}`}>{r.stateLabel}</span>
-            </div>
-          ))}
-        </div>
-        <div class="decision">
-          <div class="decision__label">{h.dash.decisionLabel}</div>
-          <p class="decision__text">{h.dash.decisionText}</p>
-          <div class="decision__buttons" aria-hidden="true">
-            <span class="fake-btn fake-btn--dark">{h.dash.approve}</span>
-            <span class="fake-btn">{h.dash.retender}</span>
-          </div>
-        </div>
-      </figure>
-      <div class="mini-chart" aria-hidden="true">
-        <div class="mini-chart__title">{h.dash.chartTitle}</div>
-        <div class="mono-small" style="margin-top:2px;font-size:11px">{h.dash.chartMeta}</div>
-        <div class="mini-chart__bars">{bars.map((b) => <span style={`height:${b}%`} />)}</div>
-        <div class="mini-chart__axis"><span>{h.dash.chartFrom}</span><span>{h.dash.chartTo}</span></div>
-      </div>
+    <div class="hero__picture">
+      <img src="/assets/illustrations/hero.svg" alt={h.heroAlt} width="640" height="560" fetchpriority="high" decoding="async" />
     </div>
   </div>
 </section>
@@ -115,125 +78,88 @@ const bars = [44, 58, 52, 70, 64, 84, 96];
         <a class="result" href={r.path}>
           <span class="result__value">{r.value}</span>
           <span class="result__label">{r.label}</span>
-          <span class="result__link">{s.readCase} →</span>
+          <span class="result__link">{s.readCase}</span>
         </a>
       ))}
     </div>
   </div>
 </section>
 
-<section class="section section--alt" aria-labelledby="note-title">
-  <div class="container container--text note">
-    <p class="eyebrow">{h.note.eyebrow}</p>
-    <h2 class="h2" id="note-title">{h.note.title}</h2>
-    <div class="note__body">
-      {h.note.paras.map((p: string) => <p>{p}</p>)}
-    </div>
-    <div class="signature">
-      <img src="/assets/elev8x-mark.svg" alt="" width="40" height="40" loading="lazy" />
-      <div>
-        <div class="signature__name">{site.founder.name}</div>
-        <div class="signature__role">{h.note.signRole}</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="approach" aria-labelledby="build-title">
+<section class="section section--alt" id="services" aria-labelledby="services-title">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow">{h.build.eyebrow}</p>
-      <h2 class="h2" id="build-title">{h.build.title}</h2>
-      <p class="lead">{h.build.lead}</p>
+      <p class="eyebrow">{h.services.eyebrow}</p>
+      <h2 class="h2" id="services-title">{h.services.title}</h2>
+      <p class="lead">{h.services.lead}</p>
     </div>
     <div class="cards">
-      {buildCards.map((c: { path?: string; icon: 'decision' | 'orchestrator' | 'roles'; num: string; title: string; text: string; typical: string }) => (
+      {serviceCards.map((c) => (
         <a class="card card--link" href={c.path}>
           <div class="card__top">
             <span class="card__icon"><Icon name={c.icon} /></span>
-            <span class="card__num">{c.num}</span>
           </div>
           <h3 class="card__title">{c.title}</h3>
           <p class="card__text">{c.text}</p>
-          <div class="card__foot"><strong>{h.build.typical}</strong>{c.typical}</div>
+          <span class="card__more">{s.viewPage}</span>
         </a>
       ))}
     </div>
   </div>
 </section>
 
-<section class="section section--alt" aria-labelledby="flow-title">
+<section class="section" id="process" aria-labelledby="process-title">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow">{h.flow.eyebrow}</p>
-      <h2 class="h2" id="flow-title">{h.flow.title}</h2>
-      <p class="lead">{h.flow.lead}</p>
+      <p class="eyebrow">{h.process.eyebrow}</p>
+      <h2 class="h2" id="process-title">{h.process.title}</h2>
+      <p class="lead">{h.process.lead}</p>
     </div>
-    <ol class="flow-steps">
-      {h.flow.steps.map((st: { tag: string; kind: string; title: string; text: string }, i: number) => (
+    <ol class="process">
+      {h.process.steps.map((st: { time: string; title: string; text: string }, i: number) => (
         <li>
-          <div class="flow-steps__top">
-            <span class="card__num">{String(i + 1).padStart(2, '0')}</span>
-            <span class={`pill pill--${st.kind}`}>{st.tag}</span>
-          </div>
+          <div class="process__top"><span class="process__num">{i + 1}</span><span class="pill pill--input">{st.time}</span></div>
           <h3>{st.title}</h3>
           <p>{st.text}</p>
         </li>
       ))}
     </ol>
-    <div class="dark-note">
-      <Icon name="orchestrator" />
-      <p>{h.flow.note}</p>
+    <div class="price-note">
+      <p><strong>{h.process.priceStrong}</strong> {h.process.priceText}</p>
+      <a class="btn btn--secondary" href={how}>{h.process.link}</a>
     </div>
   </div>
 </section>
 
-<section class="section section--dark" id="orchestrator" aria-labelledby="orch-title">
+<section class="section section--alt" id="digital-worker" aria-labelledby="worker-title">
   <div class="container split">
     <div>
-      <p class="eyebrow">{h.orchestrator.eyebrow}</p>
-      <h2 class="h2" id="orch-title">{h.orchestrator.title}</h2>
-      <p class="lead">{h.orchestrator.lead}</p>
+      <p class="eyebrow">{h.worker.eyebrow}</p>
+      <h2 class="h2" id="worker-title">{h.worker.title}</h2>
+      <p class="lead">{h.worker.lead}</p>
       <ul class="kv-list">
-        {h.orchestrator.items.map((i: { k: string; v: string }) => (
+        {h.worker.items.map((i: { k: string; v: string }) => (
           <li><span class="kv-list__k">{i.k}</span><span class="kv-list__v">{i.v}</span></li>
         ))}
       </ul>
-      <a class="text-link" href={orchestrator}>{h.orchestrator.link} →</a>
+      <a class="text-link" href={workerPage}>{h.worker.link}</a>
     </div>
-    <div>
-      <figure class="console" aria-label={h.orchestrator.console.aria}>
-        <div class="console__head">
-          <span class="console__brand"><img src="/assets/elev8x-mark.svg" alt="" width="18" height="18" loading="lazy" />{h.orchestrator.console.title}</span>
-          <span class="console__live">{h.orchestrator.console.live}</span>
-        </div>
-        <div class="console__rows">
-          {h.orchestrator.console.rows.map((r: { name: string; runs: string; state: string; ok: boolean }) => (
-            <div class="console__row"><span>{r.name}</span><span>{r.runs}</span><span class={r.ok ? 'ok' : 'warn'}>{r.state}</span></div>
-          ))}
-        </div>
-        <div class="console__log">
-          {h.orchestrator.console.log.map((l: { time: string; text: string; warn?: boolean }) => (
-            <div><span>{l.time}</span><span class={l.warn ? 'warn' : ''}>{l.text}</span></div>
-          ))}
-        </div>
-        <div class="console__foot">{s.sampleData}</div>
-      </figure>
+    <div class="split__picture">
+      <img src="/assets/illustrations/digital-worker.svg" alt={h.worker.alt} width="640" height="520" loading="lazy" decoding="async" />
     </div>
   </div>
 </section>
 
-<section class="section" id="roles" aria-labelledby="roles-title">
+<section class="section" id="solutions" aria-labelledby="solutions-title">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow">{h.roles.eyebrow}</p>
-      <h2 class="h2" id="roles-title">{h.roles.title}</h2>
-      <p class="lead">{h.roles.lead}</p>
+      <p class="eyebrow">{h.solutions.eyebrow}</p>
+      <h2 class="h2" id="solutions-title">{h.solutions.title}</h2>
+      <p class="lead">{h.solutions.lead}</p>
     </div>
     <div class="cards">
-      {roles.map((r) => <PageCard page={r} />)}
+      {solutions.map((r) => <PageCard page={r} />)}
     </div>
-    <a class="text-link" href={rolesHub}>{h.roles.link} →</a>
+    <a class="text-link" href={solutionsHub}>{h.solutions.link}</a>
   </div>
 </section>
 
@@ -266,28 +192,23 @@ const bars = [44, 58, 52, 70, 64, 84, 96];
         <figcaption>{h.cases.quoteBy}</figcaption>
       </figure>
     </div>
-    <a class="text-link" href={casesHub}>{h.cases.link} →</a>
+    <a class="text-link" href={casesHub}>{h.cases.link}</a>
   </div>
 </section>
 
-<section class="section" id="process" aria-labelledby="process-title">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">{h.process.eyebrow}</p>
-      <h2 class="h2" id="process-title">{h.process.title}</h2>
+<section class="section" aria-labelledby="note-title">
+  <div class="container container--text note">
+    <p class="eyebrow">{h.note.eyebrow}</p>
+    <h2 class="h2" id="note-title">{h.note.title}</h2>
+    <div class="note__body">
+      {h.note.paras.map((p: string) => <p>{p}</p>)}
     </div>
-    <ol class="process">
-      {h.process.steps.map((st: { time: string; title: string; text: string }, i: number) => (
-        <li>
-          <div class="process__top"><span class="process__num">{i + 1}</span><span class="pill pill--input">{st.time}</span></div>
-          <h3>{st.title}</h3>
-          <p>{st.text}</p>
-        </li>
-      ))}
-    </ol>
-    <div class="price-note">
-      <p><strong>{h.process.priceStrong}</strong> {h.process.priceText}</p>
-      <a class="btn btn--secondary" href={how}>{h.process.link}</a>
+    <div class="signature">
+      <img src="/assets/elev8x-mark.svg" alt="" width="40" height="40" loading="lazy" />
+      <div>
+        <div class="signature__name">{site.founder.name}</div>
+        <div class="signature__role">{h.note.signRole}</div>
+      </div>
     </div>
   </div>
 </section>
@@ -310,7 +231,7 @@ const bars = [44, 58, 52, 70, 64, 84, 96];
         </div>
       </article>
     </div>
-    <a class="text-link" href={about}>{h.team.link} →</a>
+    <a class="text-link" href={about}>{h.team.link}</a>
   </div>
 </section>
 
