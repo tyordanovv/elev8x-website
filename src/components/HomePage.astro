@@ -1,0 +1,240 @@
+---
+import { site } from '../config/site';
+import { t } from '../i18n/ui';
+import { href, pageByKey, pagesByKeys, type Page } from '../lib/pages';
+import PageCard from './PageCard.astro';
+import Faq from './Faq.astro';
+import Cta from './Cta.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  page: Page;
+}
+const { page } = Astro.props;
+const d = page.data;
+const h = d.home;
+const lang = d.lang;
+const s = t(lang);
+
+const contact = await href('contact', lang);
+const casesHub = await href('case-studies', lang);
+const solutionsHub = await href('solutions', lang);
+const workerPage = await href('digital-worker', lang);
+const how = await href('how-we-work', lang);
+const about = await href('about', lang);
+const solutions = await pagesByKeys(['freight-dispatcher', 'order-intake', 'invoice-checker', 'station-back-office', 'customer-success'], lang);
+const cases = await pagesByKeys(['freight-enquiries', 'fuel-station-back-office', 'autolensio'], lang);
+
+const pathOf = async (key?: string) => (key ? (await pageByKey(key, lang))?.data.path : undefined);
+const resultItems = await Promise.all(
+  h.results.items.map(async (r: { value: string; label: string; case: string }) => ({ ...r, path: await pathOf(r.case) })),
+);
+const builtFor = await Promise.all(h.builtFor.items.map(async (b: { label: string; key?: string }) => ({ ...b, path: await pathOf(b.key) })));
+const serviceCards = await Promise.all(
+  h.services.cards.map(async (c: { key: string; icon: 'decision' | 'orchestrator' | 'roles'; title: string; text: string }) => ({
+    ...c,
+    path: await pathOf(c.key),
+  })),
+);
+---
+
+<section class="hero" id="top">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="hero-pill">{h.pill}</p>
+      <h1 class="h1 h1--hero">{h.h1[0]}<span class="mark">{h.h1[1]}</span>{h.h1[2]}</h1>
+      <p class="lead lead--lg">{h.lead}</p>
+      <div class="btn-row">
+        <a class="btn btn--primary btn--lg" href={contact}>{s.bookCheck}</a>
+        <a class="btn btn--secondary btn--lg" href={casesHub}>{h.ctaSecondary}</a>
+      </div>
+      <p class="hero__tagline">{h.tagline}</p>
+    </div>
+    <div class="hero__picture">
+      <img src="/assets/illustrations/hero.svg" alt={h.heroAlt} width="640" height="560" fetchpriority="high" decoding="async" />
+    </div>
+  </div>
+</section>
+
+<section class="strip" aria-label={h.builtFor.label}>
+  <div class="container strip__inner">
+    <ul class="strip__list">
+      <li class="eyebrow">{h.builtFor.label}</li>
+      {builtFor.map((b) => <li>{b.path ? <a href={b.path}>{b.label}</a> : b.label}</li>)}
+    </ul>
+    <span class="mono-note" style="margin:0">{h.builtFor.note}</span>
+  </div>
+</section>
+
+<section class="section section--compact" aria-labelledby="results-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{h.results.eyebrow}</p>
+      <h2 class="h2" id="results-title">{h.results.title}</h2>
+      <p class="lead">{h.results.lead}</p>
+    </div>
+    <div class="results-strip" style="margin-top:40px">
+      {resultItems.map((r) => (
+        <a class="result" href={r.path}>
+          <span class="result__value">{r.value}</span>
+          <span class="result__label">{r.label}</span>
+          <span class="result__link">{s.readCase}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{h.services.eyebrow}</p>
+      <h2 class="h2" id="services-title">{h.services.title}</h2>
+      <p class="lead">{h.services.lead}</p>
+    </div>
+    <div class="cards">
+      {serviceCards.map((c) => (
+        <a class="card card--link" href={c.path}>
+          <div class="card__top">
+            <span class="card__icon"><Icon name={c.icon} /></span>
+          </div>
+          <h3 class="card__title">{c.title}</h3>
+          <p class="card__text">{c.text}</p>
+          <span class="card__more">{s.viewPage}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process" aria-labelledby="process-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{h.process.eyebrow}</p>
+      <h2 class="h2" id="process-title">{h.process.title}</h2>
+      <p class="lead">{h.process.lead}</p>
+    </div>
+    <ol class="process">
+      {h.process.steps.map((st: { time: string; title: string; text: string }, i: number) => (
+        <li>
+          <div class="process__top"><span class="process__num">{i + 1}</span><span class="pill pill--input">{st.time}</span></div>
+          <h3>{st.title}</h3>
+          <p>{st.text}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="price-note">
+      <p><strong>{h.process.priceStrong}</strong> {h.process.priceText}</p>
+      <a class="btn btn--secondary" href={how}>{h.process.link}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="digital-worker" aria-labelledby="worker-title">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">{h.worker.eyebrow}</p>
+      <h2 class="h2" id="worker-title">{h.worker.title}</h2>
+      <p class="lead">{h.worker.lead}</p>
+      <ul class="kv-list">
+        {h.worker.items.map((i: { k: string; v: string }) => (
+          <li><span class="kv-list__k">{i.k}</span><span class="kv-list__v">{i.v}</span></li>
+        ))}
+      </ul>
+      <a class="text-link" href={workerPage}>{h.worker.link}</a>
+    </div>
+    <div class="split__picture">
+      <img src="/assets/illustrations/digital-worker.svg" alt={h.worker.alt} width="640" height="520" loading="lazy" decoding="async" />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="solutions" aria-labelledby="solutions-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{h.solutions.eyebrow}</p>
+      <h2 class="h2" id="solutions-title">{h.solutions.title}</h2>
+      <p class="lead">{h.solutions.lead}</p>
+    </div>
+    <div class="cards">
+      {solutions.map((r) => <PageCard page={r} />)}
+    </div>
+    <a class="text-link" href={solutionsHub}>{h.solutions.link}</a>
+  </div>
+</section>
+
+<section class="section section--flush-top" aria-label={h.commitmentsLabel}>
+  <div class="container">
+    <div class="commitments">
+      {h.commitments.map((c: { icon: 'tag' | 'clock' | 'pulse' | 'shield'; value: string; text: string }) => (
+        <div class="commitment">
+          <Icon name={c.icon} />
+          <div class="commitment__value">{c.value}</div>
+          <p>{c.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="cases" aria-labelledby="cases-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{h.cases.eyebrow}</p>
+      <h2 class="h2" id="cases-title">{h.cases.title}</h2>
+      <p class="lead">{h.cases.lead}</p>
+    </div>
+    <div class="cards">
+      {cases.map((c) => <PageCard page={c} />)}
+      <figure class="quote-card">
+        <Icon name="quote" />
+        <blockquote>{h.cases.quote}</blockquote>
+        <figcaption>{h.cases.quoteBy}</figcaption>
+      </figure>
+    </div>
+    <a class="text-link" href={casesHub}>{h.cases.link}</a>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="note-title">
+  <div class="container container--text note">
+    <p class="eyebrow">{h.note.eyebrow}</p>
+    <h2 class="h2" id="note-title">{h.note.title}</h2>
+    <div class="note__body">
+      {h.note.paras.map((p: string) => <p>{p}</p>)}
+    </div>
+    <div class="signature">
+      <img src="/assets/elev8x-mark.svg" alt="" width="40" height="40" loading="lazy" />
+      <div>
+        <div class="signature__name">{site.founder.name}</div>
+        <div class="signature__role">{h.note.signRole}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="team" aria-labelledby="team-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">{h.team.eyebrow}</p>
+      <h2 class="h2" id="team-title">{h.team.title}</h2>
+      <p class="lead">{h.team.lead}</p>
+    </div>
+    <div class="cards">
+      <article class="person">
+        <div class="person__avatar" aria-hidden="true">TY</div>
+        <div class="person__body">
+          <h3>{site.founder.name}</h3>
+          <div class="person__role">{h.team.role}</div>
+          <p>{h.team.bio}</p>
+          <p class="person__langs">{h.team.langs}</p>
+        </div>
+      </article>
+    </div>
+    <a class="text-link" href={about}>{h.team.link}</a>
+  </div>
+</section>
+
+{d.faq?.length && <Faq lang={lang} items={d.faq} />}
+
+<Cta lang={lang} />

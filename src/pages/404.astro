@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import { t } from '../i18n/ui';
+import { pagesByKeys } from '../lib/pages';
+import PageCard from '../components/PageCard.astro';
+
+// GitHub Pages serves this file for every unknown URL, in English.
+const lang = 'en' as const;
+const s = t(lang);
+const picks = await pagesByKeys(['services', 'solutions', 'case-studies', 'contact'], lang);
+const alts = [
+  { lang: 'en' as const, path: '/' },
+  { lang: 'de' as const, path: '/de/' },
+  { lang: 'bg' as const, path: '/bg/' },
+];
+---
+
+<Base lang={lang} title="Page not found | Elev8x" description={s.notFoundText} path="/404/" alternates={alts} noindex>
+  <section class="hero hero--page">
+    <div class="container page-head">
+      <p class="eyebrow">404</p>
+      <h1 class="h1">{s.notFoundTitle}</h1>
+      <p class="lead lead--lg">{s.notFoundText}</p>
+    </div>
+  </section>
+  <section class="section section--compact">
+    <div class="container">
+      <div class="related">{picks.map((p) => <PageCard page={p} />)}</div>
+    </div>
+  </section>
+</Base>

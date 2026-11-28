@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://elev8x.eu/sitemap.xml

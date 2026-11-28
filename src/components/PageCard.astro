@@ -1,0 +1,34 @@
+---
+import type { Page } from '../lib/pages';
+import { t } from '../i18n/ui';
+
+interface Props {
+  page: Page;
+  showStatus?: boolean;
+}
+const { page, showStatus = true } = Astro.props;
+const d = page.data;
+const s = t(d.lang);
+const status =
+  d.status === 'live' ? s.statusLive : d.status === 'progress' ? s.statusProgress : d.status === 'own' ? s.statusOwn : null;
+const more = d.type === 'case' ? s.readCase : s.viewPage;
+---
+
+<a class="card card--link" href={d.path}>
+  {showStatus && status && <span class={`pill pill--${d.status}`} style="align-self:flex-start">{status}</span>}
+  {!status && d.badge && d.type === 'role' && <span class="badge" style="align-self:flex-start">{d.badge}</span>}
+  <h3 class="card__title">{d.nav}</h3>
+  {d.summary && <p class="card__text">{d.summary}</p>}
+  {d.type === 'case' && d.results?.length ? (
+    <div class="card__stats">
+      {d.results.slice(0, 2).map((r) => (
+        <div>
+          <div class="stat__value">{r.value}</div>
+          <div class="stat__label">{r.label}</div>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <span class="card__more">{more}</span>
+  )}
+</a>

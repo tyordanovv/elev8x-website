@@ -1,0 +1,124 @@
+---
+import type { Lang } from '../config/site';
+import { t, homePath } from '../i18n/ui';
+import { pageByKey } from '../lib/pages';
+import Icon from './Icon.astro';
+
+interface Props {
+  lang: Lang;
+  path: string;
+  alternates: { lang: Lang; path: string }[];
+}
+const { lang, path, alternates } = Astro.props;
+const s = t(lang);
+
+async function links(keys: string[]) {
+  const out: { label: string; path: string }[] = [];
+  for (const k of keys) {
+    const p = await pageByKey(k, lang);
+    if (p) out.push({ label: p.data.nav, path: p.data.path });
+  }
+  return out;
+}
+
+const services = await pageByKey('services', lang);
+const roles = await pageByKey('solutions', lang);
+const industries = await pageByKey('industries', lang);
+const cases = await pageByKey('case-studies', lang);
+const about = await pageByKey('about', lang);
+const how = await pageByKey('how-we-work', lang);
+const contact = await pageByKey('contact', lang);
+
+const groups = [
+  { label: s.navServices, hub: services, items: await links(['decision-automation', 'digital-worker', 'solutions']) },
+  {
+    label: s.navRoles,
+    hub: roles,
+    items: await links(['freight-dispatcher', 'order-intake', 'invoice-checker', 'station-back-office', 'customer-success']),
+  },
+  { label: s.navIndustries, hub: industries, items: await links(['freight-forwarding', 'transport-companies', 'fuel-stations']) },
+];
+
+const isIn = (p?: string) => (p ? (p === homePath[lang] ? path === p : path.startsWith(p)) : false);
+const otherLangs = alternates.filter((a) => a.lang !== lang);
+const contactPath = contact?.data.path ?? homePath[lang];
+---
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="nav__logo" href={homePath[lang]}><img src="/assets/elev8x-logo.svg" alt="Elev8x" width="96" height="34" /></a>
+
+    <ul class="nav__links">
+      {groups.map((g) => (
+        <li class="nav__item">
+          <a class="nav__link" href={g.hub?.data.path} aria-current={isIn(g.hub?.data.path) ? 'true' : undefined}>
+            {g.label}
+            <Icon name="caret" class="nav__caret" />
+          </a>
+          <ul class="nav__menu">
+            {g.items.map((i) => (
+              <li>
+                <a href={i.path} aria-current={path === i.path ? 'page' : undefined}>{i.label}</a>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+      {cases && (
+        <li class="nav__item">
+          <a class="nav__link" href={cases.data.path} aria-current={isIn(cases.data.path) ? 'true' : undefined}>{s.navCases}</a>
+        </li>
+      )}
+      {how && (
+        <li class="nav__item">
+          <a class="nav__link" href={how.data.path} aria-current={isIn(how.data.path) ? 'true' : undefined}>{s.navHow}</a>
+        </li>
+      )}
+      {about && (
+        <li class="nav__item">
+          <a class="nav__link" href={about.data.path} aria-current={isIn(about.data.path) ? 'true' : undefined}>{s.navAbout}</a>
+        </li>
+      )}
+    </ul>
+
+    <div class="nav__actions">
+      <ul class="lang-switch" aria-label={s.languages}>
+        {otherLangs.map((a) => (
+          <li>
+            <a href={a.path} hreflang={a.lang} lang={a.lang}>
+              <span aria-hidden="true">{t(a.lang).short}</span>
+              <span class="sr-only">{t(a.lang).langName}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a class="btn btn--primary btn--sm btn--cta" href={contactPath}>{s.bookCall}</a>
+      <details class="nav-mobile">
+        <summary>{s.menu}</summary>
+        <div class="nav-mobile__panel">
+          {groups.map((g) => (
+            <div class="nav-mobile__group">
+              <p class="eyebrow"><a href={g.hub?.data.path}>{g.label}</a></p>
+              <ul>
+                {g.items.map((i) => (
+                  <li><a href={i.path}>{i.label}</a></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <div class="nav-mobile__group">
+            <ul>
+              {cases && <li><a href={cases.data.path}>{s.navCases}</a></li>}
+              {how && <li><a href={how.data.path}>{s.navHow}</a></li>}
+              {about && <li><a href={about.data.path}>{s.navAbout}</a></li>}
+              {otherLangs.map((a) => (
+                <li><a href={a.path} hreflang={a.lang} lang={a.lang}>{t(a.lang).langName}</a></li>
+              ))}
+            </ul>
+          </div>
+          <a class="btn btn--primary" href={contactPath}>{s.bookCheck}</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+</header>

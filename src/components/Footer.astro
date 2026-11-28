@@ -1,0 +1,68 @@
+---
+import { site, legalFor, type Lang } from '../config/site';
+import { t } from '../i18n/ui';
+import { pageByKey } from '../lib/pages';
+
+interface Props {
+  lang: Lang;
+  alternates: { lang: Lang; path: string }[];
+}
+const { lang, alternates } = Astro.props;
+const s = t(lang);
+
+async function links(keys: string[]) {
+  const out: { label: string; path: string }[] = [];
+  for (const k of keys) {
+    const p = await pageByKey(k, lang);
+    if (p) out.push({ label: p.data.nav, path: p.data.path });
+  }
+  return out;
+}
+
+const cols = [
+  { title: s.navServices, items: await links(['services', 'decision-automation', 'digital-worker', 'solutions']) },
+  {
+    title: s.navRoles,
+    items: await links(['freight-dispatcher', 'order-intake', 'invoice-checker', 'station-back-office', 'customer-success']),
+  },
+  { title: s.navIndustries, items: await links(['industries', 'freight-forwarding', 'transport-companies', 'fuel-stations']) },
+  { title: s.footerCompany, items: await links(['case-studies', 'how-we-work', 'about', 'contact', 'imprint', 'privacy']) },
+];
+const year = new Date().getFullYear();
+const legal = legalFor(lang);
+// The full address stays on the Imprint page; the footer shows the company and city.
+const holder = site.legalName ? `${site.name} · ${legal.shortName}, ${legal.city}` : site.name;
+---
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="/assets/elev8x-logo.svg" alt="Elev8x" width="90" height="32" loading="lazy" />
+      <p>{s.footerTagline}</p>
+      <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+    </div>
+    {cols.map((c) => (
+      <div>
+        <h2>{c.title}</h2>
+        <ul>
+          {c.items.map((i) => (
+            <li><a href={i.path}>{i.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+  <div class="container footer__bottom">
+    <span>© {year} {holder}</span>
+    <span>
+      {alternates
+        .filter((a) => a.lang !== lang)
+        .map((a, i) => (
+          <>
+            {i > 0 && ' · '}
+            <a href={a.path} hreflang={a.lang} lang={a.lang}>{t(a.lang).langName}</a>
+          </>
+        ))}
+    </span>
+  </div>
+</footer>

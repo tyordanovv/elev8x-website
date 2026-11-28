@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import HomePage from '../components/HomePage.astro';
+import DetailPage from '../components/DetailPage.astro';
+import { allPages, alternates, breadcrumbs, absolute, type Page } from '../lib/pages';
+import { pageSchema } from '../lib/schema';
+
+export async function getStaticPaths() {
+  const pages = await allPages();
+  return pages.map((page) => {
+    const trimmed = page.data.path.replace(/^\/|\/$/g, '');
+    return { params: { slug: trimmed === '' ? undefined : trimmed }, props: { page } };
+  });
+}
+
+interface Props {
+  page: Page;
+}
+const { page } = Astro.props;
+const d = page.data;
+const alts = await alternates(page);
+const crumbs = await breadcrumbs(page);
+const schema = pageSchema(page, crumbs, absolute(`/og/${d.lang}.png`));
+---
+
+<Base
+  lang={d.lang}
+  title={d.title}
+  description={d.description}
+  path={d.path}
+  alternates={alts}
+  noindex={d.noindex}
+  schema={schema}
+  ogType={d.type === 'case' ? 'article' : 'website'}
+>
+  {d.type === 'home' ? <HomePage page={page} /> : <DetailPage page={page} crumbs={crumbs} />}
+</Base>

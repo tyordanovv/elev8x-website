@@ -1,0 +1,53 @@
+---
+// Case picture: an illustration, the before/after numbers and the steps as plain text.
+// The words stay in the page (not in the image), so they are translated and crawlable.
+import type { Lang } from '../config/site';
+import { t } from '../i18n/ui';
+
+type Owner = 'code' | 'ai' | 'team' | 'user';
+interface Props {
+  lang: Lang;
+  image: string;
+  flow: {
+    title: string;
+    caption: string;
+    before: { label: string; metric: string; who: string };
+    after: { label: string; metric: string };
+    steps: { name: string; owner: Owner; who?: string }[];
+    exception: { title: string; text: string };
+  };
+}
+const { lang, image, flow } = Astro.props;
+const s = t(lang);
+const ownerLabel = (o: Owner, who?: string) =>
+  who ?? (o === 'code' ? s.ownerCode : o === 'ai' ? s.ownerAi : o === 'team' ? s.ownerTeam : s.ownerUser);
+---
+
+<figure class="case-visual">
+  <img class="case-visual__img" src={image} alt={flow.title} width="1200" height="500" loading="lazy" decoding="async" />
+  <div class="case-visual__body">
+    <h2 class="case-visual__title">{flow.title}</h2>
+    <div>
+      <dl class="case-visual__compare">
+        <div>
+          <dt>{flow.before.label}</dt>
+          <dd>{flow.before.metric}</dd>
+        </div>
+        <div class="is-after">
+          <dt>{flow.after.label}</dt>
+          <dd>{flow.after.metric}</dd>
+        </div>
+      </dl>
+      <p class="case-visual__note"><strong>{flow.exception.title}:</strong> {flow.exception.text}</p>
+    </div>
+    <ol class="case-visual__steps">
+      {flow.steps.map((st) => (
+        <li>
+          <span>{st.name}</span>
+          <span class={`owner owner--${st.owner}`}>{ownerLabel(st.owner, st.who)}</span>
+        </li>
+      ))}
+    </ol>
+    <figcaption>{flow.caption}</figcaption>
+  </div>
+</figure>
